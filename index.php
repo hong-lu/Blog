@@ -4,12 +4,12 @@
 <head>
     
     <title>Login</title> 
-     <?php require_once('header.php') ?>
+     <?php require_once('common/header.php') ?>
 </head>
     
 <body style="background-color: #FFF;">
 
-    <div class="container-full">
+    <div class="container-fluid">
         
       <div class="row">
        
@@ -110,6 +110,6 @@
     <?php require_once('footer.php') ?>
     
     <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="static/js/bootstrap.js"></script>
 </body>
 </html>

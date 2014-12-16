@@ -1,19 +1,19 @@
 <html>
     <head>
         <title>HL 2014-12-16</title>
-         <?php require_once('header.php') ?>
+         <?php require_once('common/header.php') ?>
     </head>
     <body>
-        <?php require_once("nav2.php")?>
-        <div class="container-full" style="background-image:url('img/background3.jpg'); background-size: 100% 100%;">
+        <?php require_once("common/nav2.php")?>
+        <div class="container-fluid" style="background-image:url('img/background3.jpg'); background-size: 100% 100%;">
             <br><br><br>
             
             <div class="col-md-8 col-md-offset-1"><h2 style="font-family:Cursive">HL's Blog</h2></div>
-            <?php require_once("nav.php") ?>
+            <?php require_once("common/nav.php") ?>
             <br><br>
 
             <div class="row">
-                 <?php require_once('left_panel.php') ?>
+                <?php require_once('common/left_panel.php') ?>
                 <div class="col-md-9">
                     <div class="panel-default post-panel">
                         <br><br>
@@ -26,10 +26,7 @@
                             </div>
                             </div>
                             <br>
-                            
-                        </form>
-                        
-                        <br><br>
+                  
                         <div class="col-md-10 col-md-offset-2">
                         <div class="btn-group" role="group" aria-label="Align">
                             <button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
@@ -41,8 +38,7 @@
                         <br><br><br>
                         
                         
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group-lg" >
+                            <div class="form-group-lg">
                             <label for="" class="col-md-2 control-label label-lg">ABSTRACT</label>
                             </div>
                             <div class="col-md-10">
@@ -51,10 +47,8 @@
                             
                             <br>
                             
-                        </form>
                     
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group-lg" >
+                            <div class="form-group-lg">
                             <label for="" class="col-md-2 control-label label-lg">CONTENT</label>
                             </div>
                             <div class="col-md-10">
@@ -62,15 +56,17 @@
                             </div>
                             
                             <br>
-                            
+                            <br>
+                            <div class="form-group-lg">
+                                <div class="col-md-10 col-md-offset-2">
+                                    <button class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
                         </form>
-                       
                     </div>
                 </div>
             </div>
-            
-            <?php require_once('footer.php') ?>
+            <?php require_once('common/footer.php') ?>
         </div>
-
     </body>
 </html>
