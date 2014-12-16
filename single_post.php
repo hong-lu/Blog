@@ -1,7 +1,10 @@
+<?php include('config/config.php') ?>
+<?php include('config/global.php') ?>
+
 <html>
     <head>
-        <title>HL 2014-12-16</title>
-         <?php require_once('common/header.php') ?>
+        <title><?php echo SITE_TITLE ?></title>
+        <?php require_once('common/header.php') ?>
     </head>
     <body>
         <?php require_once("common/nav2.php")?>

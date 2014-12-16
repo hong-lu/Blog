@@ -1,10 +1,13 @@
+<?php include('config/config.php') ?>
+<?php include('config/global.php') ?>
+
 <!DOCTYPE html>
 <html>
     
 <head>
     
-    <title>Login</title> 
-     <?php require_once('common/header.php') ?>
+    <title><?php echo SITE_TITLE ?></title>
+    <?php require_once('common/header.php') ?>
 </head>
     
 <body style="background-color: #FFF;">

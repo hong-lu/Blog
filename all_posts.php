@@ -1,9 +1,12 @@
+<?php include('config/config.php') ?>
+<?php include('config/global.php') ?>
+
 <!DOCTYPE html>
 <html>
     
     <head>
-        <title>MyBlog</title> 
-         <?php require_once('common/header.php') ?>
+        <title><?php echo SITE_TITLE ?></title>
+        <?php require_once('common/header.php') ?>
     </head>
     
     <body>
