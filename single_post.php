@@ -1,6 +1,6 @@
 <?php include('config/config.php') ?>
 <?php include('config/global.php') ?>
-
+<?php include('model/post.php') ?>
 <html>
     <head>
         <title><?php echo SITE_TITLE ?></title>
@@ -14,18 +14,22 @@
             <div class="col-md-8 col-md-offset-1"><h2 style="font-family:Cursive">HL's Blog</h2></div>
             <?php require_once("common/nav.php") ?>
             <br><br>
-
-            <div class="row">
+            
+             <?php $id = $_GET['q'];
+            $curr_post = getSinglePost($id)
+            echo 
+            
+            '<div class="row">
                  <?php require_once('common/left_panel.php') ?>
                 <div class="col-md-9">
                     <div class="panel-default post-panel">
-                        <h3 class="post-heading">My Fisrt Day</h3>
+                        <h3 class="post-heading">' .$curr_post['heading']. '</h3>
                         <br>
-                        <p>kasdljf kkkkkkkk jjjjjjjjjjj jjjjjjjjakkkk<br><br><br></p>
+                        <p>'.$curr_post['content']. '</p>
                         
                     </div>
                 </div>
-            </div>
+            </div>'
             
             <?php require_once('common/footer.php') ?>
         </div>

@@ -12,7 +12,7 @@
           
           <button type="submit" class="btn btn-default" >Search</button>
           
-          <button type="submit" class="btn btn-success">Add new post</button>
+          <button type="submit" class="btn btn-primary">Add new post</button>
         </div>
 
     </form>

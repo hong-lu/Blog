@@ -7,7 +7,7 @@ function getAllPosts () {
   // Open a database connection
   global $config;
   $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
-  if ($db->connect_errno > 0) {
+  if ($db->connect_error > 0) {
     printf("Connect failed: %s\n", $db->connect_error);
     exit();
   }
@@ -28,14 +28,22 @@ function getSinglePost ($id) {
   // the 'Posts' table that corresponds to the $id given here.
 
   // Open a database connection
-  // $mysqli = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
-  // if (!$mysqli->connect_errno) {
-    // printf("Connect failed: %s\n", $mysqli->connect_error);
-    // exit();
-  // }
-  // Blah blah blah...
+  $mysqli = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
+    if ($mysqli->connect_error>0) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+  }
+    $sql = <<<SQL
+    SELECT *
+    FROM posts
+    WHERE post_id = $id 
+SQL;
 
-  return 'This is the return result of a single post';
+if(!$result = $db->query($sql)){
+        die('There was an error running the query [' . $db->error . ']');
+}
+
+  return  $result->fetch_assoc();
 }
 
 ?>

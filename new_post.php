@@ -8,8 +8,8 @@
     </head>
     <body>
         <?php require_once("common/nav2.php")?>
-        <div class="container-fluid" style="background-image:url('img/background3.jpg'); background-size: 100% 100%;">
-            <br><br><br>
+        <div class="container-fluid" style="background-image:url('static/img/background3.jpg'); background-size: 100% 100%;">
+            <br><br>
             
             <div class="col-md-8 col-md-offset-1"><h2 style="font-family:Cursive">HL's Blog</h2></div>
             <?php require_once("common/nav.php") ?>
@@ -18,7 +18,7 @@
             <div class="row">
                 <?php require_once('common/left_panel.php') ?>
                 <div class="col-md-9">
-                    <div class="panel-default post-panel">
+                    <div class="panel-default post-panel" style="height: 1000px">
                         <br><br>
                         
                         <form class="form-horizontal" role="form" >
@@ -28,7 +28,7 @@
                             <input type="heading" class="form-control" id="" placeholder="Enter your heading here">
                             </div>
                             </div>
-                            <br>
+                            <br><br><br><br>
                   
                         <div class="col-md-10 col-md-offset-2">
                         <div class="btn-group" role="group" aria-label="Align">
@@ -61,8 +61,8 @@
                             <br>
                             <br>
                             <div class="form-group-lg">
-                                <div class="col-md-10 col-md-offset-2">
-                                    <button class="btn btn-primary">Submit</button>
+                                <div class="col-md-7 col-md-offset-5">
+                                    <button class="btn-lg btn-primary">Submit</button>
                                 </div>
                             </div>
                         </form>

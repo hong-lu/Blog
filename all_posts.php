@@ -13,7 +13,7 @@
     <body>
         <?php require_once("common/nav2.php") ?>
         <div class="container-fluid" style="background-image:url('static/img/background3.jpg'); background-size: 100% 100%;">
-            <br><br><br>
+            <br><br>
             <div class="row">
                 <div class="col-md-8 col-md-offset-1"><h2 style="font-family:Cursive">HL's Blog</h2></div>
             </div>
@@ -27,9 +27,9 @@
                     <?php $posts = getAllPosts(); 
                     foreach ($posts as $post) {
                         echo '<div class="circle text-center">
-                                <h4 class="circleH"><a href="single_post.php">' . $post['title'] . '</a></h4>
+                                <h4 class="circleH"><a href="blog/single_post.php?post='.$post['post_id'].'">' .$post['heading']. '</a></h4>
                                     <small>Date:' . $post['date'] .  '</small>
-                                <p class="circleText">' . $post['content'] . '</p>
+                                <p class="circleText">' . $post['abstract'] . '</p>
                             </div>';
                     }
                     ?>                    
