@@ -1,5 +1,6 @@
 <?php include('config/config.php') ?>
 <?php include('config/global.php') ?>
+<?php include('model/posts.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -20,28 +21,18 @@
             <br><br>
 
             <div class="row">
-                 <?php require_once('common/left_panel.php') ?>
+                <?php require_once('common/left_panel.php') ?>
                 
                 <div class="col-md-9">
-                    <div class="circle text-center">
-                        <h4 class="circleH"><a href="single_post.php">FirstPostTitle</a></h4>
-                        <small>date:2014/12/15</small>
-                        <p class="circleText">saldskjfas  ksdj jksl dk jslfk jsdkfjwl ksj j j ksdfja</p>
-                    </div>
-                    <div class="circle text-center">
-                        <h4 class="circleH"><a href="single_post.php">SecondPostTitle</a></h4>
-                        <small>date:2014/12/15</small>
-                        <p class="circleText">saldskjfas  ksdj jksl dk jslfk jsdkfjwl ksj j j ksdfja</p>
-                    </div>   
-                    <div class="circle">
-                    </div> 
-                    <div class="circle">
-                    </div> 
-                    <div class="circle">
-                    </div> 
-                    <div class="circle">
-                    </div> 
-                    
+                    <?php $posts = getAllPosts(); 
+                    foreach ($posts as $post) {
+                        echo '<div class="circle text-center">
+                                <h4 class="circleH"><a href="single_post.php">' . $post . '</a></h4>
+                                    <small>date:2014/12/15</small>
+                                <p class="circleText">saldskjfas  ksdj jksl dk jslfk jsdkfjwl ksj j j ksdfja</p>
+                            </div>';
+                    }
+                    ?>                    
                     <?php require_once('common/pagination.php') ?>
                 </div>
                 
