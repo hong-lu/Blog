@@ -62,7 +62,7 @@
                             <br>
                             <div class="form-group-lg">
                                 <div class="col-md-7 col-md-offset-5">
-                                    <button class="btn-lg btn-primary">Submit</button>
+                                    <button type="submit" class="btn-lg btn-primary">Submit</button>
                                 </div>
                             </div>
                         </form>
