@@ -15,7 +15,10 @@
             <?php require_once("common/nav.php") ?>
             <br><br>
             
-             <?php $id = $_GET['post'];
+             <?php 
+                if (! $id = $_GET['post']){
+                    header( "Location: http://localhost/blog/all_posts.php" );
+                }
             $curr_post = getSinglePost($id);?>
             <div class="row">
             <?php require_once('common/left_panel.php');?>
