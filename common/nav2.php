@@ -1,9 +1,9 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
         <div class="row">
-        <div class="col-md-12" style="background-color:inherit; padding: 20px">
+        <div class="col-md-12 wrapper" style="background-color:inherit; padding: 10px; text-align: right">
 
-    <form class="form-inline" role="form">
+    <form class="form-inline" role="form" style="margin:0">
       <div class="form-group">
           <div class="form-group">
             <label class="sr-only" for="exampleInputPassword2">Search Blog</label>
@@ -12,7 +12,7 @@
           
           <button type="submit" class="btn btn-default" >Search</button>
           
-          <button type="submit" class="btn btn-primary">Add new post</button>
+          <button type="submit" class="btn btn-primary"><a href="../new_post.php" style="text-decoration:none; color:white;" >Add new post</a></button>
         </div>
 
     </form>

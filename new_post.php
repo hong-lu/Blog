@@ -1,6 +1,6 @@
 <?php include('config/config.php') ?>
 <?php include('config/global.php') ?>
-
+<?php include('model/posts.php') ?>
 <html>
     <head>
         <title><?php echo SITE_TITLE ?></title>
@@ -20,12 +20,23 @@
                 <div class="col-md-9">
                     <div class="panel-default post-panel" style="height: 1000px">
                         <br><br>
+
+            <?php 
+
+            if (!$id = $_GET['post']){
+                $edit = false;
+            }
+            else{
+                $edit = true;
+                $curr_post = getSinglePost($id);
+            } 
+                                    ?>
                         
                         <form action="manage_data.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
                             <label for="" class="col-md-2 control-label label-lg">HEADING</label>
                             <div class="col-md-10">
-                            <input type="text" class="form-control" name="heading" placeholder="Enter your heading here">
+                            <input type="text" class="form-control" name="heading"  <?php if ($edit == true){echo 'value='.$curr_post['heading'];}?> placeholder="Enter your heading here">
                             </div>
                             </div>
                             <br><br><br><br>
@@ -45,7 +56,7 @@
                             <label class="col-md-2 control-label label-lg">ABSTRACT</label>
                             </div>
                             <div class="col-md-10">
-                            <textarea class="form-control" rows="10" name="abstract"></textarea>
+                            <textarea class="form-control" rows="10" name="abstract"><?php if ($edit == true){echo $curr_post['abstract'];}?></textarea>
                             </div>
                             
                             <br>
@@ -55,16 +66,20 @@
                             <label for="" class="col-md-2 control-label label-lg">CONTENT</label>
                             </div>
                             <div class="col-md-10">
-                            <textarea class="form-control" rows="20" name="content"></textarea>
+                            <textarea class="form-control" rows="20" name="content"><?php if ($edit == true){echo $curr_post['content'];}?></textarea>
                             </div>
                             
-                            <br>
-                            <br>
-                            <div class="form-group-lg">
-                                <div class="col-md-7 col-md-offset-5">
-                                    <button type="submit" class="btn-lg btn-primary" >Submit</button>
-                                </div>
+                            <div class="col-md-12">
+                            <input type=hidden name="id" <?php echo 'value='.$id; ?> >
                             </div>
+                            
+                            <div class="col-md-7 col-md-offset-5">
+                                <button type="submit" class="btn-lg btn-primary" >Submit</button>
+                                <input type=hidden name="is_edit" <?php echo 'value='.$edit; ?> >
+                                
+                            </div>
+                            
+                            
                         </form>
                     </div>
                 </div>

@@ -19,7 +19,9 @@
                 if (! $id = $_GET['post']){
                     header( "Location: all_posts.php" );
                 }
-            $curr_post = getSinglePost($id);?>
+            $curr_post = getSinglePost($id);
+            ?>
+            
             <div class="row">
             <?php require_once('common/left_panel.php');?>
             <div class="col-md-9">
@@ -30,8 +32,13 @@
             <p> <?php echo $curr_post['content']; ?> </p>
                         
                     </div>
+                <div class="col-md-12 wrapper" style="text-align:center">
+                    <a class="btn-lg btn-primary" style="text-decoration:none;" href="new_post.php?post=<?php echo $_GET['post']?>">Edit</a>
+                    <a class="btn-lg btn-primary" style="text-decoration:none;" href="manage_data.php?post=<?php echo $_GET['post']?>">Delete</a>
+                    
                 </div>
-            </div>';
+                </div>
+            </div>
             
             <?php require_once('common/footer.php') ?>
         </div>

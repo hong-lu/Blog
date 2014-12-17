@@ -54,7 +54,7 @@ function createNewPost($h, $abs, $cont){
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
     }
-    printf($h);
+   
     $sql = "INSERT INTO posts (heading, abstract, content) 
     VALUES('$h', '$abs', '$cont')";
     
@@ -66,4 +66,46 @@ function createNewPost($h, $abs, $cont){
         echo "Error: " . $sql . "<br>" . $db->error;
     }
 }
+
+function updatePost($id, $h, $abs, $cont){
+    global $config;
+    $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
+    if ($db->connect_error>0) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+    }
+   
+    $sql = "UPDATE posts SET 
+    heading= '$h',
+    abstract= '$abs',
+    content= '$cont'
+    WHERE post_id= '$id' " ;
+    
+
+    if ($db->query($sql) === TRUE) {
+        echo "Record updated successfully";
+    } 
+    else {
+        echo "Error updating record: " . mysqli_error($db);
+    }
+}
+
+function deletePost($id){
+    global $config;
+    $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
+    if ($db->connect_error>0) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+    }
+   
+$sql = "DELETE FROM posts WHERE post_id='$id'";
+
+if ($db->query($sql) == TRUE) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . $db->error;
+}
+}
+
+
 ?>

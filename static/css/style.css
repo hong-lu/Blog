@@ -30,7 +30,7 @@
 .left-panel{
     margin: 20px 10px 20px 20px;
     background-color:white;
-    opacity: 0.7;
+    opacity: 0.8;
     border-radius: 10px;
     border: 0px solid transparent;
     
@@ -40,34 +40,32 @@
     padding: 20px 30px 20px 30px;
     margin: 20px 20px 20px 10px;
     background-color:white;
-    opacity: 0.7;
     border-radius: 10px;
-
+    opacity:0.8;
 }
 
 .panel-heading.navyblue{
     border-color: #337ab7;
-    background-color:#000066;  
-    opacity:0.8;
+    background-color:#10108b;  
+    opacity:0.9;
 
 }
 .panel-heading.red{
     border-color: #fd8c9e;
     background-color:#ef0303; 
-    opacity:0.8;
+    opacity:0.9;
 }
 .panel-heading.green{
     border-color: green;
     background-color:green; 
-    opacity:0.8;
+    opacity:0.9;
 }  
 .my-panel-heading{
     border:1px solid #000066;
     padding: 5px;
-    background-color:#000066;
+    background-color:#10108b;
     padding:10px;
     border-radius: 10px 10px 0 0;
-    opacity: inherit;
 }
 .post-heading{
     font-weight:bold;
@@ -89,4 +87,14 @@
     background-image:url('../img/background3.jpg'); 
     background-size: 100% 100%; 
     min-height:1000px;
+}
+.delete{
+    text-decoration: underline;
+    font-family: cursive;
+    text-align: center;
+    vertical-align:bottom;
+
+}
+.text-navy{
+    color: #0505a2;
 }
