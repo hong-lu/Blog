@@ -21,11 +21,11 @@
                     <div class="panel-default post-panel" style="height: 1000px">
                         <br><br>
                         
-                        <form class="form-horizontal" role="form" >
+                        <form action="manage_data.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
                             <label for="" class="col-md-2 control-label label-lg">HEADING</label>
                             <div class="col-md-10">
-                            <input type="heading" class="form-control" id="" placeholder="Enter your heading here">
+                            <input type="text" class="form-control" name="heading" placeholder="Enter your heading here">
                             </div>
                             </div>
                             <br><br><br><br>
@@ -42,10 +42,10 @@
                         
                         
                             <div class="form-group-lg">
-                            <label for="" class="col-md-2 control-label label-lg">ABSTRACT</label>
+                            <label class="col-md-2 control-label label-lg">ABSTRACT</label>
                             </div>
                             <div class="col-md-10">
-                            <textarea class="form-control" rows="10"></textarea>
+                            <textarea class="form-control" rows="10" name="abstract"></textarea>
                             </div>
                             
                             <br>
@@ -55,14 +55,14 @@
                             <label for="" class="col-md-2 control-label label-lg">CONTENT</label>
                             </div>
                             <div class="col-md-10">
-                            <textarea class="form-control" rows="20"></textarea>
+                            <textarea class="form-control" rows="20" name="content"></textarea>
                             </div>
                             
                             <br>
                             <br>
                             <div class="form-group-lg">
                                 <div class="col-md-7 col-md-offset-5">
-                                    <button type="submit" class="btn-lg btn-primary">Submit</button>
+                                    <button type="submit" class="btn-lg btn-primary" >Submit</button>
                                 </div>
                             </div>
                         </form>
