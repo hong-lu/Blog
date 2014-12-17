@@ -34,7 +34,7 @@
                             </div>';
                     }
                     ?>                    
-                    <?php require_once('common/pagination.php') ?>
+                    
                 </div>
                 
 

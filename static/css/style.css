@@ -26,9 +26,11 @@
     text-align: center;
     padding:30px 30px 10px 30px;
     font-weight:bold;
-    color:#10108b;
 }
 
+.circleHdiv{
+    height: 100px;
+}
 .left-panel{
     margin: 20px 10px 20px 20px;
     background-color:white;
@@ -90,13 +92,7 @@
     background-size: 100% 100%; 
     min-height:1000px;
 }
-.delete{
-    text-decoration: underline;
-    font-family: cursive;
-    text-align: center;
-    vertical-align:bottom;
 
-}
 .text-navy{
     color: #0505a2;
 }
