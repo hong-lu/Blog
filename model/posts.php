@@ -28,8 +28,9 @@ function getSinglePost ($id) {
   // the 'Posts' table that corresponds to the $id given here.
 
   // Open a database connection
-  $mysqli = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
-    if ($mysqli->connect_error>0) {
+    global $config;
+  $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
+    if ($db->connect_error>0) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
   }
