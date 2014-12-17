@@ -23,14 +23,14 @@
 
             <?php 
 
-            if (!$id = $_GET['post']){
+            if (!(isset($_GET['post'])) ){
                 $edit = false;
             }
             else{
+                $id = $_GET['post'];
                 $edit = true;
                 $curr_post = getSinglePost($id);
-            } 
-                                    ?>
+            } ?>
                         
                         <form action="manage_data.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
@@ -70,13 +70,16 @@
                             </div>
                             
                             <div class="col-md-12">
-                            <input type=hidden name="id" <?php echo 'value='.$id; ?> >
+                            <input type=hidden name="id" <?php if($edit){echo 'value='.$id;} ?> >
+                            </div>
+                            
+                            <div class="col-md-12">
+                            <input type=hidden name="date" <?php echo 'value='.date("Y-m-d"); ?>>
                             </div>
                             
                             <div class="col-md-7 col-md-offset-5">
                                 <button type="submit" class="btn-lg btn-primary" >Submit</button>
-                                <input type=hidden name="is_edit" <?php echo 'value='.$edit; ?> >
-                                
+                                <input type=hidden name="is_edit" <?php echo 'value='.$edit; ?> > 
                             </div>
                             
                             

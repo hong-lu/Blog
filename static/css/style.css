@@ -9,10 +9,11 @@
     border-radius: 100%;
     background-color:white;
     border-bottom-width: 10px;
-    opacity: 0.7;
+    opacity: 0.8;
     display: inline-block;
     margin:10px;
     float:left;
+    padding:10px;
 }
 .circleText{
     padding:10px 30px 30px 30px;
@@ -25,6 +26,7 @@
     text-align: center;
     padding:30px 30px 10px 30px;
     font-weight:bold;
+    color:#10108b;
 }
 
 .left-panel{

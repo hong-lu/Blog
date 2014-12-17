@@ -27,7 +27,7 @@
                     <?php $posts = getAllPosts(); 
                     foreach ($posts as $post) {
                         echo '<div class="circle text-center">
-                                <h4 class="circleH"><a href="/blog/single_post.php?post='.$post['post_id'].'">' .$post['heading']. '</a></h4>
+                                <h4 class="circleH"><a class="text-navy" href="/blog/single_post.php?post='.$post['post_id'].'">' .$post['heading']. '</a></h4>
                                     <small>Date:' . $post['date'] .  '</small>
                                 <p class="circleText">' . $post['abstract'] . '</p>
                                 

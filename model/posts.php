@@ -55,16 +55,15 @@ function createNewPost($h, $abs, $cont){
     exit();
     }
    
-    $sql = "INSERT INTO posts (heading, abstract, content) 
-    VALUES('$h', '$abs', '$cont')";
-    
-
-    if ($db->query($sql) === TRUE) {
-        echo "New record created successfully";
+$stmt = $db->prepare("INSERT INTO posts(heading, abstract,content) VALUES ( ?, ?, ?)");
+$stmt->bind_param('sss',$h, $abs, $cont);
+    if ($stmt->execute() === TRUE) {
+        echo "Record created successfully";
     } 
     else {
-        echo "Error: " . $sql . "<br>" . $db->error;
+        echo "Error creating record: " . mysqli_error($db);
     }
+    $stmt->close();  
 }
 
 function updatePost($id, $h, $abs, $cont){
@@ -74,20 +73,17 @@ function updatePost($id, $h, $abs, $cont){
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
     }
-   
-    $sql = "UPDATE posts SET 
-    heading= '$h',
-    abstract= '$abs',
-    content= '$cont'
-    WHERE post_id= '$id' " ;
     
-
-    if ($db->query($sql) === TRUE) {
+$stmt = $db->prepare("UPDATE posts SET heading= ?, abstract= ?, content= ? WHERE post_id= ? ");
+$stmt->bind_param('ssss',$h, $abs, $cont, $id);
+    
+    if ($stmt->execute() === TRUE) {
         echo "Record updated successfully";
     } 
     else {
         echo "Error updating record: " . mysqli_error($db);
     }
+    $stmt->close();  
 }
 
 function deletePost($id){

@@ -2,8 +2,9 @@
 <?php include('config/config.php') ?>
 <?php include('config/global.php') ?>
 <?php include('model/posts.php') ?>
- <?php   
-    if ($id = $_GET['post']){
+ <?php 
+    
+    if (isset($_GET['post']) && ($id = $_GET['post']) ){
     deletePost($id);
 }
     else if ($_POST['is_edit']){

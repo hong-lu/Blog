@@ -16,9 +16,10 @@
             <br><br>
             
              <?php 
-                if (! $id = $_GET['post']){
+                if (!(isset($_GET['post']))){
                     header( "Location: all_posts.php" );
                 }
+                    $id = $_GET['post'];
             $curr_post = getSinglePost($id);
             ?>
             
