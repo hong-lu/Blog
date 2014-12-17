@@ -8,7 +8,7 @@
     </head>
     <body>
         <?php require_once("common/nav2.php")?>
-        <div class="container-fluid" style="background-image:url('static/img/background3.jpg'); background-size: 100% 100%; min-height:1000px;">
+        <div class="container-fluid backgroundimg" >
             <br><br><br>
             
             <div class="col-md-8 col-md-offset-1"><h2 style="font-family:Cursive">HL's Blog</h2></div>
@@ -17,7 +17,7 @@
             
              <?php 
                 if (! $id = $_GET['post']){
-                    header( "Location: http://localhost/blog/all_posts.php" );
+                    header( "Location: all_posts.php" );
                 }
             $curr_post = getSinglePost($id);?>
             <div class="row">

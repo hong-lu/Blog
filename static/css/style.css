@@ -85,3 +85,8 @@
 .navbar {
     margin-bottom: 0;
 }
+.container-fluid.backgroundimg{
+    background-image:url('../img/background3.jpg'); 
+    background-size: 100% 100%; 
+    min-height:1000px;
+}
