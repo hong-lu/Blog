@@ -47,4 +47,23 @@ if(!$result = $db->query($sql)){
   return  $result->fetch_assoc();
 }
 
+function createNewPost($h, $abs, $cont){
+    global $config;
+    $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
+    if ($db->connect_error>0) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+    }
+    printf($h);
+    $sql = "INSERT INTO posts (heading, abstract, content) 
+    VALUES('$h', '$abs', '$cont')";
+    
+
+    if ($db->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } 
+    else {
+        echo "Error: " . $sql . "<br>" . $db->error;
+    }
+}
 ?>
