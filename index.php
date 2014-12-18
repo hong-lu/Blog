@@ -49,15 +49,20 @@
           </div>
 
           <div class="form-group">
-            <div class="col-md-offset-1 col-md-10">
+            <div class="col-md-12">
               <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
+            <!--    
+            <button type="submit" class="btn btn-lg btn-primary">Register here</button>
+            -->
             </div>
           </div>
         </form>
          <br> 
           
         </div>
-        
+          
+       <br clear="all">
+          <h3 class="register">Don't have an account? <br> Register here!</h3>
       </div> <!-- /row -->
   
   	  <div class="row">
@@ -68,7 +73,7 @@
       
       </div>
   
-  	<br><br><br>
+  	<br><br>
 
 </div> <!-- /container full -->
 
@@ -110,7 +115,7 @@
     </div>
     </div>
 
-    <?php require_once('footer.php') ?>
+    <?php require_once('/common/footer.php') ?>
     
     <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
     <script src="static/js/bootstrap.js"></script>
