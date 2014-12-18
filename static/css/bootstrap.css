@@ -119,7 +119,6 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-    padding-right:30px;
 }
 button {
   overflow: visible;
@@ -281,6 +280,7 @@ th {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    margin-right: 20px;
 }
 .glyphicon-asterisk:before {
   content: "\2a";

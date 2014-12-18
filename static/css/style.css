@@ -102,3 +102,7 @@
     text-decoration: underline;
     font-size: 22px;
 }
+.MyPostPanel{
+    border-bottom: 2px solid #2c3e50;
+    margin: 40px;
+}
