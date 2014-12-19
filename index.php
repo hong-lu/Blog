@@ -16,7 +16,7 @@
         
       <div class="row">
        
-        <div class="col-lg-12 text-center v-center" style="background-color:#000066">
+        <div class="col-lg-12 text-center v-center" style="background-color:#18bc9c">
           
           <h1 style="color:#FFFFFF; font-family:Papyrus">MilkyBlog</h1>
           <p class="lead text1" >Home Page</p>
@@ -50,7 +50,7 @@
 
           <div class="form-group">
             <div class="col-md-12">
-              <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
+              <button type="submit" class="btn btn-primary">Sign in</button>
             <!--    
             <button type="submit" class="btn btn-lg btn-primary">Register here</button>
             -->
@@ -61,8 +61,8 @@
           
         </div>
           
-       <br clear="all">
-          <h3 class="register">Don't have an account? <br> Register here!</h3>
+       <br clear="all"> <br clear="all">
+          <h3 class="register"><a href="register.php" style="color:black;">Don't have an account?<br>Register here!</h3>
       </div> <!-- /row -->
   
   	  <div class="row">
@@ -72,8 +72,6 @@
         </div>
       
       </div>
-  
-  	<br><br>
 
 </div> <!-- /container full -->
 
@@ -83,8 +81,8 @@
   
   	<div class="row">
         <div class="col-md-4">
-          <div class="panel panel-default" >
-            <div class="panel-heading red" ><h3 class="text1">Hello.</h3></div>
+          <div class="panel panel-info" >
+            <div class="panel-heading" ><h3 class="text1">Hello.</h3></div>
             <div class="panel-body " style="border-color: #337ab7;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
             Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
             dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
@@ -93,8 +91,8 @@
           </div>
         </div>
       	<div class="col-md-4">
-        	<div class="panel panel-default">
-            <div class="panel-heading navyblue"><h3 class="text1">Hello.</h3></div>
+        	<div class="panel panel-warning">
+            <div class="panel-heading"><h3 class="text1">Hello.</h3></div>
             <div class="panel-body" style="border-color: #fd8c9e;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
             Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
             dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
@@ -103,9 +101,9 @@
           </div>
         </div>
       	<div class="col-md-4">
-        	<div class="panel panel-success">
-            <div class="panel-heading green"><h3 class="text1">Hello.</h3></div>
-            <div class="panel-body"style="border-color: #337ab7;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+        	<div class="panel panel-danger">
+            <div class="panel-heading"><h3 class="text1">Hello.</h3></div>
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
             Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
             dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
             Aliquam in felis sit amet augue.

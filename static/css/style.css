@@ -97,9 +97,9 @@
 }
 .register{
     text-align: center;
-    font-family: cursive;
-    text-decoration: underline;
+    color: black;
     font-size: 22px;
+    text-decoration: underline;
 }
 .MyPostPanel{
     border-bottom: 2px solid #2c3e50;
