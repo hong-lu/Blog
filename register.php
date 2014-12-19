@@ -1,6 +1,3 @@
-<?php include('config/config.php') ?>
-<?php include('config/global.php') ?>
-<?php include('model/posts.php') ?>
 <html>
     <head>
         <title>Register</title>
@@ -8,7 +5,9 @@
     </head>
     
     <body>
-        <?php require_once("common/new_nav.php")?>
+        <?php require_once("common/new_nav.php");
+              require_once("common/include.php");
+        ?>
         <div class="container-fluid">
             <div class="bs-docs-section">
                 <div class="row">
@@ -93,27 +92,12 @@
 
               <div class="form-group">
                 <div class="col-lg-12">
-                  <button type="submit" style="margin-left:45%;" class="btn btn-primary">Submit</button>
+                  <button type="submit" style="margin-left:45%;" class="btn btn-primary" href="all_posts.php?uid='.$_GET['id']">Submit</button>
                 </div>
               </div>
             </fieldset>
           </form>
             
-            
-<script>
-    function myFunction() {
-        var pass1 = document.getElementById("pass1").value;
-        var pass2 = document.getElementById("pass2").value;
-        if (pass1 != pass2) {
-            //alert("Passwords Do not match");
-            document.getElementById("pass1").style.borderColor = "#E34234";
-            document.getElementById("pass2").style.borderColor = "#E34234";
-        }
-        else {
-            alert("Passwords Match!!!");
-        }
-    }
-</script>
             
         </div>
       </div>

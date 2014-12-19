@@ -1,6 +1,6 @@
 <?php
 
-function getAllPosts () {
+function getAllPosts ($uid) {
   // This function should do a mysql query and return 
   // all the posts from the 'Posts' table
 
@@ -12,8 +12,8 @@ function getAllPosts () {
     exit();
   }
   // Some code to access the database and for processing
-  if (!$result = $db->query("SELECT * FROM posts")){
-    die('There was an error running the query [' . $db->error . ']');
+  if (!$result = $db->query("SELECT * FROM posts WHERE uid='$uid'")){
+    return ;
   }
   
   $posts = array();
@@ -47,7 +47,7 @@ if(!$result = $db->query($sql)){
   return  $result->fetch_assoc();
 }
 
-function createNewPost($h, $abs, $cont){
+function createNewPost($h, $abs, $cont, $uid){
     global $config;
     $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
     if ($db->connect_error>0) {
@@ -55,8 +55,8 @@ function createNewPost($h, $abs, $cont){
     exit();
     }
    
-$stmt = $db->prepare("INSERT INTO posts(heading, abstract,content) VALUES ( ?, ?, ?)");
-$stmt->bind_param('sss',$h, $abs, $cont);
+$stmt = $db->prepare("INSERT INTO posts(heading, abstract,content, uid) VALUES ( ?, ?, ?,?)");
+$stmt->bind_param('ssss',$h, $abs, $cont,$uid);
     if ($stmt->execute() === TRUE) {
         echo "Record created successfully";
     } 

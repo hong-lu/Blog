@@ -12,10 +12,13 @@
             <?php require_once("common/page_header.php");?>
         <div class="container-fluid">
         <div class="row">
-            <?php require_once("common/left_panel.php");?>
-            
+            <?php require_once("common/left_panel.php");
+            $id = $_GET['uid'];
+            ?>
+
             <div class="col-lg-9">
-                <?php $posts = getAllPosts(); 
+                <?php $posts = getAllPosts($id); 
+                if ($posts){
                       foreach ($posts as $post) {
                       echo '<div class="MyPostPanel">
                             <h3><a href="/blog/single_post.php?post='.$post['post_id'].'">' .$post['heading']. '</a></h3>
@@ -23,6 +26,7 @@
                             <p>' . $post['abstract'] . '</p>
                             </div>';
                       }
+                }
                 ?> 
             </div>
             </div>

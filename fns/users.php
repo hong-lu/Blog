@@ -23,8 +23,7 @@
     }
         
     function addUser($user_name, $email, $gender, $password, $pf_name){
-        $db = opendb();
-        
+        $db = opendb();    
         $stmt = $db->prepare("INSERT INTO users(user_name, email, gender, password, pf_name) VALUES ( ?, ?, ?, ?, ?)");
         $stmt->bind_param('sssss',$user_name, $email, $gender, $password, $pf_name);
         if ($stmt->execute() === TRUE) {
@@ -33,7 +32,16 @@
         else {
             echo "Error creating record: " . mysqli_error($db);
         }
-        $stmt->close();  
+        $stmt2 = "SELECT * FROM users WHERE user_name = '$user_name' ";
+        if(!$result = $db->query($stmt2)){
+            die('There was an error running the query [' . $db->error . ']');
+        }   
+
+        $row = $result->fetch_assoc();
+        $stmt->close();
+        
+        return $row['uid'];
+        
     }
     
 ?>

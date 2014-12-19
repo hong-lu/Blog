@@ -9,9 +9,9 @@
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Active</a>
+      <li class="active"><a href="all_posts.php?uid=".$_GET['uid']>All Posts</a>
       </li>
-      <li><a href="all_posts.php">All Posts</a>
+      <li><a href="new_post.php">New Post</a>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Setting<b class="caret"></b></a>
