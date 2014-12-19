@@ -21,7 +21,7 @@
                 if ($posts){
                       foreach ($posts as $post) {
                       echo '<div class="MyPostPanel">
-                            <h3><a href="/blog/single_post.php?post='.$post['post_id'].'">' .$post['heading']. '</a></h3>
+                            <h3><a href="single_post.php?post='.$post['post_id'].'">' .$post['heading']. '</a></h3>
                             <small>Date:' . $post['date'] .  '</small>
                             <p>' . $post['abstract'] . '</p>
                             </div>';

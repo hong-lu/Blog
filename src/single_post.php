@@ -31,7 +31,7 @@
                     </div>
                 <div class="col-md-12 wrapper" style="text-align:center">
                     <a class="btn btn-success" style="text-decoration:none;" href="new_post.php?post=<?php echo $_GET['post']?>">Edit</a>
-                    <a class="btn btn-danger" style="text-decoration:none;" href="manage_data.php?post=<?php echo $_GET['post']?>">Delete</a>
+                    <a class="btn btn-danger" style="text-decoration:none;" href="manage_post.php?post=<?php echo $_GET['post']?>">Delete</a>
                     
                 </div>
                 </div>
