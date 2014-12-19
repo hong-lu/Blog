@@ -1,6 +1,6 @@
 <?php include('config/config.php') ?>
 <?php include('config/global.php') ?>
-<?php include('model/posts.php') ?>
+<?php include('fns/posts.php') ?>
 <html>
     <head>
         <title><?php echo SITE_TITLE ?></title>

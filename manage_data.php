@@ -1,7 +1,7 @@
 <html>
 <?php include('config/config.php') ?>
 <?php include('config/global.php') ?>
-<?php include('model/posts.php') ?>
+<?php include('fns/posts.php') ?>
  <?php 
     
     if (isset($_GET['post']) && ($id = $_GET['post']) ){

@@ -41,7 +41,7 @@
                   </div>
                 </div>
                 
-                <div class="panel panel-success">
+                <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">
                         <span class="glyphicon glyphicon-folder-open" style="margin-right: 10px;" aria-hidden="true"></span>
