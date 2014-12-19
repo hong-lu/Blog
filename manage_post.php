@@ -2,7 +2,7 @@
 <?php session_start();?>
  <?php 
     require_once("common/include.php");
-    include("fns/users.php");
+    
     session_start();
     if (isset($_GET['post']) && ($id = $_GET['post']) ){
     deletePost($id);

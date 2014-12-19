@@ -26,7 +26,7 @@
                             $curr_post = getSinglePost($id);
                         } ?>
                         
-                        <form action="manage_data.php" class="form-horizontal" role="form" method="post" >
+                        <form action="manage_post.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
                             <label for="" class="col-md-2 control-label label-lg">HEADING</label>
                             <div class="col-md-10">
@@ -70,8 +70,8 @@
                             </div>
                             
                             <div class="col-md-6 col-md-offset-6">
+                                <input type=hidden name="is_edit" <?php echo 'value='.$edit; ?> >
                                 <button type="submit" class="btn btn-primary" >Submit</button>
-                                <input type=hidden name="is_edit" <?php echo 'value='.$edit; ?> > 
                             </div>
                             
                             

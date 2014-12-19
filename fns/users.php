@@ -32,16 +32,29 @@
         else {
             echo "Error creating record: " . mysqli_error($db);
         }
-        $stmt2 = "SELECT * FROM users WHERE user_name = '$user_name' ";
+
+        $stmt->close();
+        return getUserId($user_name);
+    }
+    function getUserId($uname){
+        $db = opendb(); 
+        $stmt2 = "SELECT * FROM users WHERE user_name = '$uname' ";
         if(!$result = $db->query($stmt2)){
             die('There was an error running the query [' . $db->error . ']');
         }   
 
         $row = $result->fetch_assoc();
-        $stmt->close();
-        
         return $row['uid'];
-        
     }
-    
+    function loginCheck($uname, $password){
+        $db = opendb();
+        $result= $db->query("SELECT * from users WHERE user_name='$uname' and password='$password' ");
+        if(mysqli_num_rows($result)==1){
+            $row = $result->fetch_assoc();
+            return $row['uid'];
+        }
+        else{
+            return false;
+        }
+    }
 ?>

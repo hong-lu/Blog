@@ -23,18 +23,18 @@
           
           <br/>
             
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" action="manage_user_info.php" method="post">
           <div class="form-group">
-            <label for="inputEmail3" class="col-md-4 control-label text1">Email</label>
+            <label for="inputEmail3" class="col-md-4 control-label text1">Username</label>
             <div class="col-md-5">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Email Address">
+              <input type="text" class="form-control" name="user_name" placeholder="Your user name">
             </div>
           </div>
 
           <div class="form-group">
             <label for="inputPassword3" class="col-md-4 control-label text1">Password</label>
             <div class="col-md-5">
-              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
           </div>
 
@@ -47,13 +47,14 @@
               </div>
             </div>
           </div>
+        
+          <div class="col-md-12">
+              <input type="hidden" value="login" name="action">
+          </div>
 
           <div class="form-group">
             <div class="col-md-12">
               <button type="submit" class="btn btn-primary">Sign in</button>
-            <!--    
-            <button type="submit" class="btn btn-lg btn-primary">Register here</button>
-            -->
             </div>
           </div>
         </form>
