@@ -54,7 +54,7 @@
 
           <div class="form-group">
             <div class="col-md-12">
-              <button type="submit" class="btn btn-primary">Sign in</button>
+              <button type="submit" class="btn btn-primary">Log in</button>
             </div>
           </div>
         </form>
