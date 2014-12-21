@@ -58,7 +58,9 @@
         if(!$result = $db->query($sql)){
             die('There was an error running the query [' . $db->error . ']');
         }
-        $row = $result->fetch_assoc();       
+        $row = $result->fetch_assoc();
+        session_start();
+        $_SESSION['uid'] = $row['uid'];
         return $row['uid'];
     }
    
