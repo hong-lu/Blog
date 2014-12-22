@@ -3,7 +3,7 @@
       <div class="panel-heading">
         <h3 class="panel-title">
             <span class="glyphicon glyphicon-user" style="margin-right: 10px;" aria-hidden="true"></span>
-            My Personal Infomation
+            Author's Personal Infomation
         </h3>
       </div>
       <div class="panel-body">

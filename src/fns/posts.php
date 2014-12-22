@@ -105,7 +105,7 @@ function updatePost($id, $h, $abs, $cont){
 
     function createComment($uid, $pid, $content){
         $db = opendb();
-        $stmt = $db->prepare("INSERT INTO comments(uid, pid, content) VALUES ( ?, ?, ?)");
+        $stmt = $db->prepare("INSERT INTO comments(uid, pid,content, date) VALUES ( ?, ?, ?)");
         $stmt->bind_param('iis',$uid, $pid, $content);
         if ($stmt->execute() === TRUE) {
             echo "Record created successfully";

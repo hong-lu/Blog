@@ -2,7 +2,7 @@
     function opendb(){
         global $config;
         $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);
-        if ($db->connect_error > 0) {
+        if ($db->connect_errno > 0) {
             printf("Connect failed: %s\n", $db->connect_error);
             exit();
         }
@@ -74,5 +74,16 @@
         }
         $row = $result->fetch_assoc();       
         return $row['pf_name'];
-    }   
+    } 
+
+    function logOut() {
+        if (isset($_SESSION['uid'])) {
+            session_unset();
+            session_destroy();
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 ?>

@@ -55,3 +55,4 @@
       
   </div>
 </nav>
+<script>$('.dropdown-toggle').dropdown()</script>
