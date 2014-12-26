@@ -21,7 +21,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2" >
         <div class="well bs-component">
-          <form class="form-horizontal" method="post" action="create_user.php">
+          <form class="form-horizontal" method="post" action="manage_input/create_user.php">
             <fieldset>
               <legend style="text-align: center">Please take note that all fields are mandatory</legend>
               <div class="form-group">

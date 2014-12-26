@@ -1,5 +1,5 @@
-<?php include('config/config.php') ?>
-<?php include('config/global.php') ?>
+<?php include('/../config/config.php') ?>
+<?php include('/../config/global.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@
           
           <br/>
             
-        <form class="form-horizontal" role="form" action="manage_user_info.php" method="post">
+        <form class="form-horizontal" role="form" action="manage_input/manage_user_info.php" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-md-4 control-label text1">Username</label>
             <div class="col-md-5">

@@ -1,5 +1,5 @@
 <?php
-    include ("/../fns/users.php");
+    include ("../../fns/users.php");
     $msg = "";
 
     if(empty($_POST['user_name'])){
@@ -75,5 +75,5 @@
     }
     ;
 
-    header('Location: /../all_posts.php?uid='.$id);
+    header('Location:../all_posts.php?uid='.$id);
     ?> 

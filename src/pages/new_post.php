@@ -26,7 +26,7 @@
                             $curr_post = getSinglePost($id);
                         } ?>
                         
-                        <form action="manage_post.php" class="form-horizontal" role="form" method="post" >
+                        <form action="manage_input/manage_post.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
                             <label for="" class="col-md-2 control-label label-lg">HEADING</label>
                             <div class="col-md-10">

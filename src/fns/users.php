@@ -80,7 +80,7 @@
         if (isset($_SESSION['uid'])) {
             session_unset();
             session_destroy();
-            return true;
+            return "Log Out Successfully!";
         }else{
             return false;
         }

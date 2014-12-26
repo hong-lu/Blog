@@ -60,7 +60,7 @@
                                     </div>';}
                     ?>
                     
-                    <form role="form" action="manage_comment.php" method="post">
+                    <form role="form" action="manage_input/manage_comment.php" method="post">
                         <br><br>
                         <textarea class="form-control" rows="10" name="comment" placeholder="Your Comment Here..."></textarea>
                         <br>
