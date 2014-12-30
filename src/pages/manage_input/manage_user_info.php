@@ -8,5 +8,7 @@ if ($_POST['action'] == "login"){
         echo "Wrong Input!";
     }
 }
+elif ($_POST['action'] == "change"){
+}
 
 ?>

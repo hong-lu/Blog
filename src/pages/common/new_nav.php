@@ -14,7 +14,7 @@
       <li><a href="new_post.php">New Post</a>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Setting<b class="caret"></b></a>
+        <a data-target="#" href="../acc_settings.php" class="dropdown-toggle" data-toggle="dropdown">Account Setting<b class="caret"></b></a>
         <ul style="margin-top: 0px; display: none;" class="dropdown-menu">
           <li><a href="#">Action</a>
           </li>
@@ -56,4 +56,5 @@
       
   </div>
 </nav>
-<script>$('.dropdown-toggle').dropdown()</script>
+
+

@@ -114,9 +114,7 @@
     </div>
     </div>
 
-    <?php require_once('/common/footer.php') ?>
+    <?php require_once('common/footer.php') ?>
     
-    <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
-    <script src="static/js/bootstrap.js"></script>
 </body>
 </html>
