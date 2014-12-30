@@ -15,7 +15,7 @@
       </li>
       <li class="dropdown">
         <a data-target="#" href="../acc_settings.php" class="dropdown-toggle" data-toggle="dropdown">Account Setting<b class="caret"></b></a>
-        <ul style="margin-top: 0px; display: none;" class="dropdown-menu">
+        <ul style="margin-top: 0px;" class="dropdown-menu">
           <li><a href="#">Action</a>
           </li>
           <li><a href="#">Another action</a>
