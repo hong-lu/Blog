@@ -48,7 +48,8 @@
                     <div class="MyCommentHeading"><h3>Comments</h3></div>
                     <?php $comments = getComments($pid);
                                 foreach ($comments as $cmt){
-                                    $pfname = getPfName($cmt['uid']);
+                                    $array = getUserInfo($cmt['uid']);
+                                    $pfname = $array['pf_name'];
                                     echo 
                                     '<div class="MyCommentPanel">
                                         <span class="glyphicon glyphicon-user" aria-hidden=true> '.$pfname.'</span>

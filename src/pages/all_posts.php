@@ -2,11 +2,13 @@
     <head>
         <title>All Posts</title>
         <?php require_once('common/header.php') ?>
+        
     </head>
     
     <body>
         <?php require_once("common/new_nav.php");
-              require_once("common/include.php")
+              require_once("common/include.php");
+              session_start();
         ?>
         <div class="container-fluid">
             <?php require_once("common/page_header.php");?>

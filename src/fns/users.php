@@ -65,7 +65,7 @@
     }
    
 
-    function getPfName($uid){
+    function getUserInfo($uid){
         $db = opendb();
         $sql = "SELECT * FROM users WHERE uid = '$uid' ";
         $result= $db->query($sql);
@@ -73,7 +73,7 @@
             die('There was an error running the query [' . $db->error . ']');
         }
         $row = $result->fetch_assoc();       
-        return $row['pf_name'];
+        return $row;
     } 
 
     function logOut() {
@@ -84,6 +84,19 @@
         }else{
             return false;
         }
+    }
+    
+    function changeUserInfo($email, $gender, $password, $pf_name){
+        $db = opendb();
+        $stmt = $db->prepare("UPDATE users SET email = ?, gender = ?, password = ?, pf_name = ? WHERE uid = ?");
+        $stmt->bind_param('ssssi', $email, $gender, $password, $pf_name, $_SESSION['uid']);
+        if ($stmt->execute() === TRUE) {
+            echo "Record updated successfully";
+        } 
+        else {
+            echo "Error updating record: " . mysqli_error($db);
+        }
+        $stmt->close();  
     }
 
 ?>

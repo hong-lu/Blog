@@ -9,27 +9,9 @@
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="all_posts.php?uid=".$_GET['uid']>All Posts</a>
-      </li>
-      <li><a href="new_post.php">New Post</a>
-      </li>
-      <li class="dropdown">
-        <a data-target="#" href="../acc_settings.php" class="dropdown-toggle" data-toggle="dropdown">Account Setting<b class="caret"></b></a>
-        <ul style="margin-top: 0px;" class="dropdown-menu">
-          <li><a href="#">Action</a>
-          </li>
-          <li><a href="#">Another action</a>
-          </li>
-          <li><a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li class="dropdown-header">Dropdown header</li>
-          <li><a href="#">Separated link</a>
-          </li>
-          <li><a href="#">One more separated link</a>
-          </li>
-        </ul>
-      </li>
+      <li class="active"><a href="all_posts.php?uid=".$_GET['uid']>All Posts</a></li>
+      <li><a href="new_post.php">New Post</a></li>
+      <li><a href="acc_settings.php">Account Setting</a></li>
     </ul>
     <form class="navbar-form navbar-left">
       <input class="form-control col-lg-8" placeholder="Search" type="text">

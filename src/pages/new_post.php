@@ -2,6 +2,29 @@
     <head>
         <title> Edit Post </title>
         <?php require_once('common/header.php') ?>
+        <script type="text/javascript" src="static/js/tinymce/tinymce.min.js">></script>
+        <script type="text/javascript">
+            tinymce.init({
+                selector: "textarea#elm1",
+                theme: "modern",
+                plugins: [
+                     "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                     "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                     "save table contextmenu directionality emoticons template paste textcolor"
+               ],
+               content_css: "css/content.css",
+               toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons", 
+               style_formats: [
+                    {title: 'Bold text', inline: 'b'},
+                    {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                    {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                    {title: 'Example 1', inline: 'span', classes: 'example1'},
+                    {title: 'Example 2', inline: 'span', classes: 'example2'},
+                    {title: 'Table styles'},
+                    {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+                ]
+             });
+        </script>
     </head>
     <body>
         <?php require_once("common/new_nav.php");
@@ -28,27 +51,19 @@
                         
                         <form action="manage_input/manage_post.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
-                            <label for="" class="col-md-2 control-label label-lg">HEADING</label>
-                            <div class="col-md-10">
-                            <input type="text" class="form-control" name="heading"  <?php if ($edit == true){echo 'value='.$curr_post['heading'];}?> placeholder="Enter your heading here">
-                            </div>
+                                <label for="" class="col-md-2 control-label label-lg">HEADING</label>
+                                <div class="col-md-10">
+                                <input type="text" class="form-control" name="heading"  <?php if ($edit == true){echo 'value='.$curr_post['heading'];}?> placeholder="Enter your heading here">
+                                </div>
                             </div>
                             <br><br><br><br>
-                  
-                            <div class="col-md-10 col-md-offset-2">
-                            <div class="btn-group" role="group" aria-label="Align">
-                                <button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></button>
-                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-center" aria-hidden="true"></span></button>
-      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-right" aria-hidden="true"></span></button>
-                            </div>
-                            </div>
                             
                             <div class="row" style="margin: 20px 0 20px 0;">
                             <div class="form-group-lg"style="margin: 30px 0 20px 0;">
                             <label class="col-md-2 control-label label-lg">ABSTRACT</label>
                             </div>
                             <div class="col-md-10">
-                            <textarea class="form-control" rows="10" name="abstract"><?php if ($edit == true){echo $curr_post['abstract'];}?></textarea>
+                            <textarea id="elm1" class="form-control" rows="10" name="abstract"><?php if ($edit == true){echo $curr_post['abstract'];}?></textarea>
                             </div>
                             </div>
                             
@@ -58,7 +73,7 @@
                             <label for="" class="col-md-2 control-label label-lg">CONTENT</label>
                             </div>
                             <div class="col-md-10">
-                            <textarea class="form-control" rows="20" name="content"><?php if ($edit == true){echo $curr_post['content'];}?></textarea>
+                            <textarea class="form-control" id="elm1" rows="20" name="content"><?php if ($edit == true){echo $curr_post['content'];}?></textarea>
                             </div>
                             
                             <div class="col-md-12">
