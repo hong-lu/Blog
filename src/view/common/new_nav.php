@@ -13,7 +13,7 @@
       <li><a href="new_post.php">New Post</a></li>
       <li><a href="acc_settings.php">Account Setting</a></li>
     </ul>
-    <form class="navbar-form navbar-left">
+    <form class="navbar-form navbar-left" method="post" action="manage_input/search_post.php">
       <input class="form-control col-lg-8" placeholder="Enter the post title" type="text">
       <button type="submit" class="btn btn-success" >Search</button>
     </form>

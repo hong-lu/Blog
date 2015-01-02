@@ -1,6 +1,6 @@
 <?php
 
-require_once("/../config/config.php");
+require_once(__DIR__."/../config/config.php");
 function opendb(){
     global $config;
     $db = new mysqli($config['hostname'], $config['dbuser'], $config['dbpassword'], $config['dbname']);

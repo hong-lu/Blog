@@ -1,5 +1,5 @@
 <?php
-    include_once('users.php');
+    include_once(__DIR__."/db.php");
     function getAllPosts ($uid) {
       $db = opendb();
       if (!$result = $db->query("SELECT * FROM posts WHERE uid='$uid'")){
