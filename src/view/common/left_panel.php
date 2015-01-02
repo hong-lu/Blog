@@ -7,8 +7,17 @@
         </h3>
       </div>
       <div class="panel-body">
-        <p>Address: <br>
-           blahblah</p>
+          <?php $result = getUserInfo($id); 
+          echo "Name: ". $result['pf_name']."<br>
+          Gender:".$result['gender']." <br>
+          Email:". $result['email']." <br>";
+          if ($result['age'] != 0){
+              echo "Age : ".$result['age']." <br>";
+          }
+          if (!empty($result['address'])){
+              echo "Address : ".$result['address']." <br>";
+          }
+          ?>
       </div>
     </div>
 

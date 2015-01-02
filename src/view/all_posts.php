@@ -14,8 +14,13 @@
             <?php require_once("common/page_header.php");?>
         <div class="container-fluid">
         <div class="row">
-            <?php require_once("common/left_panel.php");
-            $id = $_SESSION['uid'];
+            <?php 
+            if (isset($_GET['uid'])){
+                $id = $_GET['uid'];
+            }else{
+                $id = $_SESSION['uid'];
+            }
+            require_once("common/left_panel.php");
             ?>
 
             <div class="col-lg-9">
