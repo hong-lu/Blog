@@ -2,7 +2,7 @@
     <head>
         <title> Edit Post </title>
         <?php require_once('common/header.php') ?>
-        <script type="text/javascript" src="static/js/tinymce/tinymce.min.js">></script>
+        <script type="text/javascript" src="../static/js/tinymce/tinymce.min.js">></script>
         <script type="text/javascript">
             tinymce.init({
                 selector: "textarea#elm1",
@@ -26,6 +26,7 @@
              });
         </script>
     </head>
+    
     <body>
         <?php require_once("common/new_nav.php");
               require_once("common/include.php")

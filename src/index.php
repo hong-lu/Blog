@@ -1,13 +1,10 @@
-<?php include('/../config/config.php') ?>
-<?php include('/../config/global.php') ?>
-
 <!DOCTYPE html>
 <html>
     
-<head>
-    
-    <title><?php echo SITE_TITLE ?></title>
-    <?php require_once('common/header.php') ?>
+<head> 
+    <title>Home</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css"  type="text/css">
+    <link rel="stylesheet" href="static/css/style.css"  type="text/css">
 </head>
     
 <body style="background-color: #FFF;">
@@ -23,7 +20,7 @@
           
           <br/>
             
-        <form class="form-horizontal" role="form" action="manage_input/manage_user_info.php" method="post">
+        <form class="form-horizontal" role="form" action="view/manage_input/manage_user_info.php" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-md-4 control-label text1">Username</label>
             <div class="col-md-5">
@@ -114,7 +111,7 @@
     </div>
     </div>
 
-    <?php require_once('common/footer.php') ?>
+    <?php require_once('view/common/footer.php') ?>
     
 </body>
 </html>

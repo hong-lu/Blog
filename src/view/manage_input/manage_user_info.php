@@ -1,5 +1,5 @@
 <?php
-include ("../../fns/users.php");
+include_once("../../model/users.php");
 session_start();
 if ($_POST['action'] == "login"){
     if($uid = loginCheck($_POST['user_name'], $_POST['password'])){

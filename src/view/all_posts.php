@@ -7,15 +7,15 @@
     
     <body>
         <?php require_once("common/new_nav.php");
-              require_once("common/include.php");
-              session_start();
+            require_once("common/include.php");
+            session_start();
         ?>
         <div class="container-fluid">
             <?php require_once("common/page_header.php");?>
         <div class="container-fluid">
         <div class="row">
             <?php require_once("common/left_panel.php");
-            $id = $_GET['uid'];
+            $id = $_SESSION['uid'];
             ?>
 
             <div class="col-lg-9">

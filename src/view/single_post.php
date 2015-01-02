@@ -5,9 +5,9 @@
     </head>
     <body>
         <?php   
-                session_start();
-                require_once("common/new_nav.php");
-                require_once("common/include.php");
+            session_start();
+            require_once("common/new_nav.php");
+            require_once("common/include.php");
                 
         ?>
         <div class="container-fluid">

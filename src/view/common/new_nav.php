@@ -5,7 +5,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" style="font-family:Papyrus" href="index.php">MilkyBlog</a>
+    <a class="navbar-brand" style="font-family:Papyrus" href="../index.php">MilkyBlog</a>
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
@@ -14,7 +14,7 @@
       <li><a href="acc_settings.php">Account Setting</a></li>
     </ul>
     <form class="navbar-form navbar-left">
-      <input class="form-control col-lg-8" placeholder="Search" type="text">
+      <input class="form-control col-lg-8" placeholder="Enter the post title" type="text">
       <button type="submit" class="btn btn-success" >Search</button>
     </form>
       

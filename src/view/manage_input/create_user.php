@@ -1,5 +1,5 @@
 <?php
-    include ("../../fns/users.php");
+    include_once ("../../model/users.php");
     $msg = "";
 
     if(empty($_POST['user_name'])){

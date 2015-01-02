@@ -1,5 +1,5 @@
 <?php
-include("../../fns/posts.php");
+include_once("../../model/posts.php");
 
 createComment($_POST['uid'], $_POST['pid'], $_POST['comment']);
 
