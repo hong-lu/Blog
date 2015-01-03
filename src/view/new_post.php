@@ -11,10 +11,10 @@
                      "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
                      "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
                      "save table contextmenu directionality emoticons template paste textcolor"
-               ],
-               content_css: "css/content.css",
-               toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons", 
-               style_formats: [
+                ],
+                content_css: "css/content.css",
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons", 
+                style_formats: [
                     {title: 'Bold text', inline: 'b'},
                     {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
                     {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
@@ -28,18 +28,19 @@
     </head>
     
     <body>
-        <?php require_once("common/new_nav.php");
-              require_once("common/include.php");
-            session_start();
-            if (!(isset($_GET['post'])) ){
-                $edit = false;
-                $id = $_SESSION['uid'];
-            }
-            else{
-                $id = $_GET['post'];
-                $edit = true;
-                $curr_post = getSinglePost($id);
-            } 
+        <?php 
+        require_once("common/new_nav.php");
+        require_once("common/include.php");
+        session_start();
+        if (!(isset($_GET['post'])) ){
+            $edit = false;
+            $id = $_SESSION['uid'];
+        }
+        else{
+            $id = $_GET['post'];
+            $edit = true;
+            $curr_post = getSinglePost($id);
+        } 
                         
         ?>
         
@@ -62,25 +63,25 @@
                             <br><br><br><br>
                             
                             <div class="row" style="margin: 20px 0 20px 0;">
-                            <div class="form-group-lg"style="margin: 30px 0 20px 0;">
-                            <label class="col-md-2 control-label label-lg">ABSTRACT</label>
-                            </div>
-                            <div class="col-md-10">
-                            <textarea id="elm1" class="form-control" rows="10" name="abstract"><?php if ($edit == true){echo $curr_post['abstract'];}?></textarea>
-                            </div>
+                                <div class="form-group-lg"style="margin: 30px 0 20px 0;">
+                                    <label class="col-md-2 control-label label-lg">ABSTRACT</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <textarea id="elm1" class="form-control" rows="10" name="abstract"><?php if ($edit == true){echo $curr_post['abstract'];}?></textarea>
+                                </div>
                             </div>
                             
                             
                     
                             <div class="form-group-lg">
-                            <label class="col-md-2 control-label label-lg">CONTENT</label>
+                                <label class="col-md-2 control-label label-lg">CONTENT</label>
                             </div>
                             <div class="col-md-10">
-                            <textarea class="form-control" id="elm1" rows="20" name="content"><?php if ($edit == true){echo $curr_post['content'];}?></textarea>
+                                <textarea class="form-control" id="elm1" rows="20" name="content"><?php if ($edit == true){echo $curr_post['content'];}?></textarea>
                             </div>
                             
                             <div class="col-md-12">
-                            <input type=hidden name="id" <?php if($edit){echo 'value='.$id;} ?> >
+                                <input type=hidden name="id" <?php if($edit){echo 'value='.$id;} ?> >
                             </div>
                             
                             <div class="col-md-6 col-md-offset-6">
@@ -93,6 +94,7 @@
                     </div>
                 </div>
             </div>
+
             <?php require_once('common/footer.php') ?>
         </div>
     </body>
