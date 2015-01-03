@@ -8,6 +8,7 @@
         <?php 
         require_once("common/new_nav.php");
         require_once("common/include.php");
+        include("../helper/helper.php");
         session_start();
         $userInfo = getUserInfo($_SESSION['uid']);
         ?>
@@ -26,7 +27,7 @@
                     <div class="col-lg-8 col-lg-offset-2" >
 
                         <div class="well bs-component">
-                            <form class="form-horizontal" method="post" action="manage_input/manage_user_info.php">
+                            <form class="form-horizontal" method="post" action="manage_input/manage_user_info.php" onsubmit="return validateSecurityForm(this);">
                                 <fieldset>
                                     <div class="col-md-12">
                                         <input type="hidden" value="security" name="action"></input>
@@ -42,7 +43,7 @@
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-lg-3 control-label">New Password</label>
                                         <div class="col-lg-9">
-                                            <input type="password" name="pass1" class="form-control" id="inputPassword" placeholder="Your password should consists of both alphabets and numbers!" value ="<?php echo $userInfo['password']; ?>">
+                                            <input type="password" name="pass1" class="form-control" id="pass1" placeholder="Your password should consists of both alphabets and numbers!" value ="<?php echo $userInfo['password']; ?>" >
                                         </div>
                                     </div>
                               
@@ -50,7 +51,7 @@
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-lg-3 control-label">Confirm Password</label>
                                         <div class="col-lg-9">
-                                            <input type="password" name="pass2" class="form-control" id="inputPassword" onsumbit="return myFunction()" placeholder="Please enter your password again">
+                                            <input type="password" name="pass2" class="form-control" id="pass2" onchange="checkPassSame(); return false;" placeholder="Please enter your password again">
                                         </div>
                                     </div>
                                 

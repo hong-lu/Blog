@@ -60,7 +60,7 @@
         </div>
           
        <br clear="all"> <br clear="all">
-          <h3 class="register"><a href="register.php" style="color:black;">Don't have an account?<br>Register here!</h3>
+          <h3 class="register"><a href="view/register.php" style="color:black;">Don't have an account?<br>Register here!</h3>
       </div> <!-- /row -->
   
   	  <div class="row">
