@@ -16,12 +16,14 @@
         <ul class="dropdown-menu">
           <li><a href="security_setting.php">Security Setting</a>
           </li>
-          <li><a href="profile_setting.php">Preference Setting</a>
+          <li><a href="preference_setting.php">Preference Setting</a>
           </li>
+          <li><a href="profile.php">Upload Profile Image</a>
           </li>
         </ul>
       </li>
     </ul>
+      
     <form class="navbar-form navbar-left" method="post" action="manage_input/search_post.php">
       <input class="form-control col-lg-8" placeholder="Enter the post title" type="text">
       <button type="submit" class="btn btn-success" >Search</button>

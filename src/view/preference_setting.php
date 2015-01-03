@@ -26,10 +26,7 @@
         <div class="well bs-component">
           <form class="form-horizontal" method="post" action="manage_input/manage_user_info.php">
             <fieldset>
-                <div class="col-md-12">
-                  <input type="hidden" value="change" name="action"></input>
-                </div> 
-                
+            
               <div class="form-group">
                 <label for="inputPreferredName" class="col-lg-3 control-label">Preferred Name</label>
                 <div class="col-lg-9">
@@ -79,7 +76,7 @@
                 </div>
               </div>
               
-              <input type="hidden" value="profile" name="action"></input>
+              <input type="hidden" value="preference" name="action"></input>
               <div class="form-group">
                 <div class="col-lg-12">
                   <button type="submit" style="margin-left:45%;" class="btn btn-primary" href="all_posts.php?uid='.$_GET['id']">Submit</button>

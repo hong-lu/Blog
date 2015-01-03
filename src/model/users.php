@@ -48,7 +48,6 @@
             die('There was an error running the query [' . $db->error . ']');
         }
         $row = $result->fetch_assoc();
-        session_start();
         $_SESSION['uid'] = $row['uid'];
         return $row['uid'];
     }
@@ -93,6 +92,19 @@
         $stmt = $db->prepare("UPDATE users SET email = ?, password = ? WHERE uid = ?");
         $stmt->bind_param('ssi', $email, $password, $_SESSION['uid']);
         if ($stmt->execute() === TRUE) {
+            echo "Record updated successfully";
+        } 
+        else {
+            echo "Error updating record: " . mysqli_error($db);
+        }
+        $stmt->close();  
+    }
+    function uploadImg($url){
+        $db = opendb();
+        $stmt = $db->prepare("UPDATE users SET img = ? WHERE uid = ?");
+        $stmt ->bind_param('si', $url, $_SESSION['uid']);
+        if ($stmt->execute() === TRUE) {
+            echo $_SESSION['uid'];
             echo "Record updated successfully";
         } 
         else {

@@ -1,8 +1,6 @@
 <html>
-<?php session_start();?>
  <?php 
     include_once('../../model/posts.php');
-    
     session_start();
     if (isset($_GET['post']) && ($id = $_GET['post']) ){
     deletePost($id);
