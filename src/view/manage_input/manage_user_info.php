@@ -19,7 +19,7 @@ else if ($_POST['action'] == "security"){
 }
 else if ($_POST['action'] == "profile"){
     
-    $target_dir = "../uploads/";
+    $target_dir = "../../static/uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

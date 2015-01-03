@@ -7,10 +7,10 @@
                 <img src="
                 <?php 
                 if(empty($user['img'])){
-                    echo "http://www.soideas.cn/uploads/allimg/110819/09115512P-11.jpg";
+                    echo "../static/uploads/default.jpg";
                 }
                 else{
-                    echo "uploads/".$user['img'];
+                    echo "../static/uploads/".$user['img'];
                 }
                 ?>"  
                 style="max-width: 200px; max-height=200px;" class="img-circle"> </a>
