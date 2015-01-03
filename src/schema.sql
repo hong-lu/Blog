@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2014 at 09:43 AM
+-- Generation Time: Jan 03, 2015 at 08:08 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -32,12 +32,16 @@ CREATE TABLE IF NOT EXISTS `comments` (
 `cid` int(11) NOT NULL,
   `content` text NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `comments`
 --
 
+INSERT INTO `comments` (`uid`, `pid`, `cid`, `content`, `date`) VALUES
+(49, 48, 10, 'Final test', '2014-12-21 05:17:45'),
+(49, 22, 11, 'Hi there!!', '2014-12-21 05:24:32'),
+(48, 53, 13, 'ff', '2014-12-26 02:06:40');
 
 -- --------------------------------------------------------
 
@@ -53,11 +57,25 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_name` varchar(20) NOT NULL,
   `uid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
 --
+
+INSERT INTO `posts` (`post_id`, `heading`, `abstract`, `content`, `date`, `user_name`, `uid`) VALUES
+(10, 'Stories of American Livelihood', 'Update!', 'content here', '2014-12-17 10:59:39', '', 0),
+(22, 'TEST AUTO TIME', 'CREAT A TIME', '19:27', '2014-12-17 11:27:20', '', 0),
+(23, 'Test', 'Call to a member function bind_param() on boolean', '<script>alert(''Hello hello!'')</script>', '2014-12-19 02:45:16', '', 0),
+(48, 'Fish Leong', 'J', 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF', '2014-12-20 08:47:26', '', 49),
+(49, 'Hi', 'OMG', 'There', '2014-12-21 04:32:35', '', 49),
+(50, 'hhhhhhhhhhhh', 'HH', 'HH', '2014-12-21 04:53:18', '', 49),
+(51, 'HI', 'TEst', '', '2014-12-21 05:30:11', '', 49),
+(52, 'ff', 'ff', 'ff', '2014-12-21 05:34:14', '', 49),
+(54, 'FFFFF', 'FFFFFFF', 'FFFFFFFFFFFF', '2014-12-22 09:07:42', '', 48),
+(61, 'YS', '<p>YEY</p>', '<p>TEST</p>', '2015-01-03 07:04:49', '', 1);
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `users`
@@ -69,12 +87,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_name` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `email` varchar(25) NOT NULL,
-  `pf_name` varchar(30) NOT NULL
+  `pf_name` varchar(30) NOT NULL,
+  `age` int(11) NOT NULL,
+  `address` text NOT NULL,
+  `intro` text NOT NULL,
+  `img` text NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
+
+INSERT INTO `users` (`uid`, `gender`, `user_name`, `password`, `email`, `pf_name`, `age`, `address`, `intro`, `img`) VALUES
+(1, 'F', 'hlhl', '123', 'hlmom@blahba.com', '1234', 18, ' eeeee', ' eeeeeee', '20813_188421673.jpg'),
+(48, 'F', 'Mom', '111', 'hlmom@blahba.com', 'XCM', 0, '', '', ''),
+(49, 'F', 'kkk', 'kkk', 'kkk@kk.com', 'kk', 0, '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -106,12 +133,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `post_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
+MODIFY `post_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT for table `users`
 --
