@@ -8,10 +8,14 @@
             session_start();
             require_once("common/new_nav.php");
             require_once("common/include.php");
-                
+             if (isset($_GET['uid'])){
+                $id = $_GET['uid'];
+            }else{
+                $id = $_SESSION['uid'];
+            }               
         ?>
         <div class="container-fluid">
-            
+
             <?php require_once("common/page_header.php");
             ?>
 
