@@ -9,8 +9,12 @@ if ($_POST['action'] == "login"){
         echo "Wrong Input!";
     }
 }
-else if ($_POST['action'] == "change"){
-    changeUserInfo($_POST['email'], $_POST['gender'], $_POST['pass1'], $_POST['pf_name']);
+else if ($_POST['action'] == "profile"){
+    changeUserInfo($_POST['pf_name'], $_POST['age'], $_POST['address'], $_POST['gender'],  $_POST['intro']);
+    header("Location: ../all_posts.php?uid=".$_SESSION['uid']);
+}
+else if ($_POST['action'] == "security"){
+    changeSecuritySetting($_POST['email'], $_POST['pass1']);
     header("Location: ../all_posts.php?uid=".$_SESSION['uid']);
 }
 

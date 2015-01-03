@@ -29,7 +29,18 @@
     
     <body>
         <?php require_once("common/new_nav.php");
-              require_once("common/include.php")
+              require_once("common/include.php");
+            session_start();
+            if (!(isset($_GET['post'])) ){
+                $edit = false;
+                $id = $_SESSION['uid'];
+            }
+            else{
+                $id = $_GET['post'];
+                $edit = true;
+                $curr_post = getSinglePost($id);
+            } 
+                        
         ?>
         
         <div class="container-fluid">
@@ -40,16 +51,7 @@
                 <div class="col-md-9">
                     <div class="jumbotron clearfix" >
 
-                        <?php 
-                        if (!(isset($_GET['post'])) ){
-                            $edit = false;
-                        }
-                        else{
-                            $id = $_GET['post'];
-                            $edit = true;
-                            $curr_post = getSinglePost($id);
-                        } ?>
-                        
+
                         <form action="manage_input/manage_post.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
                                 <label for="" class="col-md-2 control-label label-lg">HEADING</label>
@@ -71,7 +73,7 @@
                             
                     
                             <div class="form-group-lg">
-                            <label for="" class="col-md-2 control-label label-lg">CONTENT</label>
+                            <label class="col-md-2 control-label label-lg">CONTENT</label>
                             </div>
                             <div class="col-md-10">
                             <textarea class="form-control" id="elm1" rows="20" name="content"><?php if ($edit == true){echo $curr_post['content'];}?></textarea>

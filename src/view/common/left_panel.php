@@ -40,6 +40,10 @@
                         }
                     }
                     }
+                    else{
+                        echo '<p style = "padding: 20px"> Current user has not created any post yet!';
+                    }
+    
             ?>
         </div>
       </div>

@@ -75,10 +75,23 @@
         }
     }
     
-    function changeUserInfo($email, $gender, $password, $pf_name){
+    function changeUserInfo($pf_name, $age, $address, $gender, $intro){
         $db = opendb();
-        $stmt = $db->prepare("UPDATE users SET email = ?, gender = ?, password = ?, pf_name = ? WHERE uid = ?");
-        $stmt->bind_param('ssssi', $email, $gender, $password, $pf_name, $_SESSION['uid']);
+        $stmt = $db->prepare("UPDATE users SET pf_name = ?, age = ?, address = ?, gender = ?, intro = ? WHERE uid = ?");
+        $stmt->bind_param('sisssi', $pf_name, $age, $address, $gender, $intro, $_SESSION['uid']);
+        if ($stmt->execute() === TRUE) {
+            echo "Record updated successfully";
+        } 
+        else {
+            echo "Error updating record: " . mysqli_error($db);
+        }
+        $stmt->close();  
+    }
+
+    function changeSecuritySetting($email, $password){
+        $db = opendb();
+        $stmt = $db->prepare("UPDATE users SET email = ?, password = ? WHERE uid = ?");
+        $stmt->bind_param('ssi', $email, $password, $_SESSION['uid']);
         if ($stmt->execute() === TRUE) {
             echo "Record updated successfully";
         } 

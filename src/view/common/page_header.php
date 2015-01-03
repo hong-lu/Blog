@@ -8,7 +8,14 @@
               <div class="col-lg-9">
                     <h1><?php $user = getUserInfo($id);
                             echo $user['pf_name']." 's Blog"; ?> </h1>
-                    <p class="lead">This is a simple introduction.</p>
+                    <p class="lead">
+                        <?php if(empty($user['intro'])){
+                                echo "Welcome to my blog!";
+                            }else{
+                                echo $user['intro'];
+                            }
+                        ?>
+                    </p>
               </div>
           </div>
       </div>

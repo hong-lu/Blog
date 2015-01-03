@@ -11,7 +11,16 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="all_posts.php?uid=".$_GET['uid']>All Posts</a></li>
       <li><a href="new_post.php">New Post</a></li>
-      <li><a href="acc_settings.php">Account Setting</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Settings <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="security_setting.php">Security Setting</a>
+          </li>
+          <li><a href="profile_setting.php">Preference Setting</a>
+          </li>
+          </li>
+        </ul>
+      </li>
     </ul>
     <form class="navbar-form navbar-left" method="post" action="manage_input/search_post.php">
       <input class="form-control col-lg-8" placeholder="Enter the post title" type="text">
@@ -22,7 +31,7 @@
         <li><a class="btn" style="text-decoration:none;" href="manage_input/logout.php">Log Out</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right: 20px" >Explore Around <b class="caret"></b></a>
-        <ul style="margin-top: 0px; display: none;" class="dropdown-menu">
+        <ul class="dropdown-menu">
           <li><a href="#">Action</a>
           </li>
           <li><a href="#">Another action</a>

@@ -17,7 +17,7 @@
           <div class="col-lg-12">
             <br><br>
             <div class="page-header">
-              <h2 id="forms" style="text-align: center">Edit your account settings </h2>
+              <h2 id="forms" style="text-align: center">Edit your profile and personal information </h2> 
             </div>
           </div>
             
@@ -28,44 +28,35 @@
             <fieldset>
                 <div class="col-md-12">
                   <input type="hidden" value="change" name="action"></input>
-                </div>   
-                
-            <div class="form-group">
-            <label for="inputEmail" class="col-lg-3 control-label">Email</label>
-            <div class="col-lg-9">
-              <input type="text" class="form-control" name="email" value ="<?php echo $userInfo['email']; ?>"></input>
-            </div>
-            </div>
-                
-            <div class="form-group">
-                <label for="inputPassword" class="col-lg-3 control-label">New Password</label>
-                <div class="col-lg-9">
-                  <input type="password" name="pass1" class="form-control" id="inputPassword" placeholder="Your password should consists of both alphabets and numbers!" value ="<?php echo $userInfo['password']; ?>">
-                </div>
-            </div>
-            
-              
-            <div class="form-group">
-                <label for="inputPassword" class="col-lg-3 control-label">Confirm Password</label>
-                <div class="col-lg-9">
-                  <input type="password" name="pass2" class="form-control" id="inputPassword" onsumbit="return myFunction()" placeholder="Please enter your password again">
-                </div>
-            </div>
-              
+                </div> 
                 
               <div class="form-group">
                 <label for="inputPreferredName" class="col-lg-3 control-label">Preferred Name</label>
                 <div class="col-lg-9">
-                  <input type="text" class="form-control" name="pf_name" placeholder="Change your name shown to other users" value ="<?php echo $userInfo['pf_name']; ?>">
+                  <input type="text" class="form-control" name="pf_name" value ="<?php echo $userInfo['pf_name']; ?>">
                 </div>
               </div>
-                
+              
+              <div class="form-group">
+                <label for="inputPreferredName" class="col-lg-3 control-label">Age</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" name="age" value ="<?php echo $userInfo['age']; ?>">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="inputPreferredName" class="col-lg-3 control-label">Address</label>
+                <div class="col-lg-9">
+                    <textarea rows="2" type="text" class="form-control" name="address" value ="<?php echo $userInfo['address']; ?>"> </textarea>
+                </div>
+              </div>
+              
               <div class="form-group">
                 <label class="col-lg-3 control-label">Gender</label>
                 <div class="col-lg-9">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="gender" value="F" checked="">Female
+                      <input type="radio" name="gender" value="F">Female
                     </label>
                   </div>
                   <div class="radio">
@@ -80,7 +71,15 @@
                   </div>
                 </div>
               </div>
-
+              
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Self Introduction</label>
+                <div class="col-lg-9">
+                    <textarea rows="4" type="text" class="form-control" name="intro" value ="<?php echo $userInfo['intro']; ?>"> </textarea>
+                </div>
+              </div>
+              
+              <input type="hidden" value="profile" name="action"></input>
               <div class="form-group">
                 <div class="col-lg-12">
                   <button type="submit" style="margin-left:45%;" class="btn btn-primary" href="all_posts.php?uid='.$_GET['id']">Submit</button>
