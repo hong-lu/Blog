@@ -11,16 +11,15 @@
 
         <div class="container-fluid">
 
-            <?php require_once("common/page_header.php");?>
-
             <?php 
                 if (!(isset($_GET['post']))){
                     header( "Location: all_posts.php" );
                 }
                 $pid = $_GET['post'];
                 $curr_post = getSinglePost($pid);
+                $uid = $curr_post['uid'];
             ?>
-            
+            <?php require_once("common/page_header.php");?>
             <div class="row">
                 <?php require_once('common/left_panel.php');?>
             
@@ -33,13 +32,17 @@
                         <p class="lead"> <?php echo $curr_post['abstract']; ?></p>
                         <p> <?php echo $curr_post['content']; ?> </p>
                     </div>
-                
+                <?php
+                if ( $uid == $_SESSION['uid']) {
+                    echo '
                     <div class="container-fluid" style="margin-bottom: 30px;">
                         <div class="col-md-12" style="text-align:center;">
-                            <a class="btn btn-success" style="text-decoration:none;" href="new_post.php?post=<?php echo $_GET['post']?>">Edit</a>
-                            <a class="btn btn-danger" style="text-decoration:none;" href="manage_post.php?post=<?php echo $_GET['post']?>">Delete</a>                   
+                            <a class="btn btn-success" style="text-decoration:none;" href="new_post.php?post='. $_GET['post'].' ">Edit</a>
+                            <a class="btn btn-danger" style="text-decoration:none;" href="manage_input/manage_post.php?post='. $_GET['post'].' ">Delete</a>                   
                         </div>
-                    </div>
+                    </div>';
+                }
+                ?>
                 
                     <div class="jumbotron">
                         <div class="MyCommentHeading"><h3>Comments</h3></div>
