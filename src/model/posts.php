@@ -94,4 +94,15 @@
         }
         return $comments;
     }
+    
+    function getPosts(){
+        $db = opendb();
+        $stmt = "SELECT * from posts";
+        $result = $db->query($stmt);
+        $posts = array();
+        while ($row = $result->fetch_assoc()) {
+            array_push($posts, $row);
+        }
+        return $posts;
+    }
 ?>
