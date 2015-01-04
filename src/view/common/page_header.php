@@ -1,4 +1,4 @@
-<?php $user = getUserInfo($id);?>
+<?php $user = getUserInfo($uid);?>
 <div class="page-header" id="banner">
     <div class="row">
         <div class="jumbotron">

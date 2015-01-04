@@ -9,12 +9,6 @@
         <?php 
         require_once("common/new_nav.php");
         require_once("common/include.php");
-        session_start();
-        if (isset($_GET['uid'])){
-            $id = $_GET['uid'];
-        }else{
-            $id = $_SESSION['uid'];
-        } 
         ?>
 
         <div class="container-fluid">
@@ -24,7 +18,7 @@
             <div class="row">
                 <?php require_once("common/left_panel.php"); ?>
                 <div class="col-lg-9">
-                    <?php $posts = getAllPosts($id); 
+                    <?php $posts = getAllPosts($uid); 
                     if ($posts){
                         foreach ($posts as $post) {
                         echo '<div class="MyPostPanel">

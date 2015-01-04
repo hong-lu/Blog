@@ -1,8 +1,8 @@
 <html>
     <head>
         <title> Edit Post </title>
-        <?php require_once('common/header.php') ?>
-        <script type="text/javascript" src="../static/js/tinymce/tinymce.min.js">></script>
+        <?php require_once('common/header.php'); ?>
+        <script type="text/javascript" src="../static/js/tinymce/tinymce.min.js"></script>
         <script type="text/javascript">
             tinymce.init({
                 selector: "textarea#elm1",
@@ -29,29 +29,26 @@
     
     <body>
         <?php 
-        require_once("common/new_nav.php");
         require_once("common/include.php");
-        session_start();
         if (!(isset($_GET['post'])) ){
             $edit = false;
-            $id = $_SESSION['uid'];
         }
         else{
-            $id = $_GET['post'];
+            $pid = $_GET['post'];
             $edit = true;
-            $curr_post = getSinglePost($id);
+            $curr_post = getSinglePost($pid);
         } 
-                        
+        require_once("common/new_nav.php"); 
         ?>
         
         <div class="container-fluid">
             <?php require_once("common/page_header.php");?>
-
+        </div>
+        <div class="container-fluid">  
             <div class="row">
                 <?php require_once('common/left_panel.php') ?>
                 <div class="col-md-9">
                     <div class="jumbotron clearfix" >
-
 
                         <form action="manage_input/manage_post.php" class="form-horizontal" role="form" method="post" >
                             <div class="form-group-lg" >
@@ -81,7 +78,7 @@
                             </div>
                             
                             <div class="col-md-12">
-                                <input type=hidden name="id" <?php if($edit){echo 'value='.$id;} ?> >
+                                <input type=hidden name="id" <?php if($edit){echo 'value='.$pid;} ?> >
                             </div>
                             
                             <div class="col-md-6 col-md-offset-6">

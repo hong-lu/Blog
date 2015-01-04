@@ -8,7 +8,7 @@
     </div>
 
     <div class="panel-body">
-        <?php $result = getUserInfo($id); 
+        <?php $result = getUserInfo($uid); 
         echo "Name: ". $result['pf_name']."<br>
         Gender:".$result['gender']." <br>
         Email:". $result['email']." <br>";
@@ -36,7 +36,7 @@
             <div class="list-group" style="margin:0">
 
                 <?php  
-                $posts = getAllPosts($id); 
+                $posts = getAllPosts($uid); 
                 if ($posts){
                     foreach ($posts as $post) {
                         if (isset($_GET['post']) && ($post['post_id'] == $_GET['post'])){
