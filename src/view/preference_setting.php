@@ -43,7 +43,7 @@
                                     </div>
                                 
                                     <div class="form-group">
-                                        <label for="inputPreferredName" class="col-lg-3 control-label">Age</label>
+                                        <label for="inputPreferredName" class="col-lg-3 control-label" type="number" min="1" >Age</label>
                                         <div class="col-lg-9">
                                           <input type="text" class="form-control" name="age" value ="<?php echo $userInfo['age']; ?>">
                                         </div>
@@ -61,16 +61,22 @@
                                         <div class="col-lg-9">
                                             <div class="radio">
                                                 <label>
-                                                  <input type="radio" name="gender" value="F"> Female
+                                                  <input type="radio" name="gender" value="F" 
+                                                         <?php if ($userInfo['gender'] === 'F'){ echo 'checked="true"';}?>
+                                                         > Female
                                                 </label>
                                             </div>
                                             <div class="radio">
-                                                <label> <input type="radio" name="gender" value="M"> Male
+                                                <label> <input type="radio" name="gender" value="M"
+                                                               <?php if ($userInfo['gender'] === 'M'){ echo 'checked="true"';}?>
+                                                               > Male
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="gender" value="I'd rather not say">I'd rather not say.
+                                                    <input type="radio" name="gender" value="I would rather not say"
+                                                           <?php if ($userInfo['gender'] === 'I would rather not say'){ echo 'checked="true"';} ?>
+                                                           >I'd rather not say.
                                                 </label>
                                             </div>
                                         </div>
