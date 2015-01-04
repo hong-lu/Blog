@@ -12,5 +12,5 @@ else{
     $_SESSION['uid'] = $id;
 }
 
-//header('Location:../all_posts.php?uid='.$id);
+header('Location:../all_posts.php?uid='.$id);
 ?> 

@@ -1,18 +1,18 @@
 <?php include_once("../model/users.php"); ?>
 <script>    
     function validateSecurityForm(form){
-        event.preventDefault();
+
         var pass = form.pass1.value;
-        var valid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
         var warning = "#e43725";
 
-        if (checkPassword(pass1) !== ""){
+        if (checkPassword(pass) != ""){
             form.pass1.focus();
-            error = checkPassword(pass1);
+            error = checkPassword(pass);
             alert(error);
             return false;
         
         } else {
+            console.log(true);
             return true;
         }
     }
@@ -43,7 +43,6 @@
     }
     
     function validateRegistrationForm(form){
-        event.preventDefault();
         var pass1 = form.pass1.value;
         var uname = form.user_name.value;
         var pf_name = form.pf_name.value;
@@ -84,14 +83,13 @@
     function checkPassword(pass){
         var valid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
         var error = "";
-        console.log(pass === "");
         if (pass === "") {
             error = "You didn't enter a password.\n";
 
         } else if ((pass.length < 6) || (pass.length > 16)) {
             error = "The password should be more than 6 characters and less than 16 characters. \n";
 
-        } else if (!valid.test(pass)){
+        } else if (!(valid.test(pass))){
             error = "The password must contain one lowercase letter, one uppercase letter and one numeric digit.\n";
         
         } 
