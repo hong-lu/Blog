@@ -78,10 +78,10 @@
         }
     }
     
-    function changeUserInfo($pf_name, $age, $address, $gender, $intro){
+    function changeUserInfo($email, $pf_name, $age, $address, $gender, $intro){
         $db = opendb();
-        $stmt = $db->prepare("UPDATE users SET pf_name = ?, age = ?, address = ?, gender = ?, intro = ? WHERE uid = ?");
-        $stmt->bind_param('sisssi', $pf_name, $age, $address, $gender, $intro, $_SESSION['uid']);
+        $stmt = $db->prepare("UPDATE users SET email = ?, pf_name = ?, age = ?, address = ?, gender = ?, intro = ? WHERE uid = ?");
+        $stmt->bind_param('ssisssi', $email, $pf_name, $age, $address, $gender, $intro, $_SESSION['uid']);
         if ($stmt->execute() === TRUE) {
             echo "Record updated successfully";
         } 
@@ -91,10 +91,10 @@
         $stmt->close();  
     }
 
-    function changeSecuritySetting($email, $password){
+    function changeSecuritySetting($password){
         $db = opendb();
-        $stmt = $db->prepare("UPDATE users SET email = ?, password = ? WHERE uid = ?");
-        $stmt->bind_param('ssi', $email, $password, $_SESSION['uid']);
+        $stmt = $db->prepare("UPDATE users SET password = ? WHERE uid = ?");
+        $stmt->bind_param('si', $password, $_SESSION['uid']);
         if ($stmt->execute() === TRUE) {
             echo "Record updated successfully";
         } 

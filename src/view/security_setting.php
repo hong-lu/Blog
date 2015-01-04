@@ -32,13 +32,7 @@
                                     <div class="col-md-12">
                                         <input type="hidden" value="security" name="action"></input>
                                     </div>   
-                                  
-                                    <div class="form-group">
-                                        <label for="inputEmail" class="col-lg-3 control-label">Email</label>
-                                        <div class="col-lg-9">
-                                            <input type="text" class="form-control" name="email" value ="<?php echo $userInfo['email']; ?>"></input>
-                                        </div>
-                                    </div>
+
                                   
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-lg-3 control-label">New Password</label>

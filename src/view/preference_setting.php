@@ -34,7 +34,14 @@
                                           <input type="text" class="form-control" name="pf_name" value ="<?php echo $userInfo['pf_name']; ?>">
                                         </div>
                                     </div>
-                                      
+                                   
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="col-lg-3 control-label">Email</label>
+                                        <div class="col-lg-9">
+                                            <input type="text" class="form-control" name="email" value ="<?php echo $userInfo['email']; ?>"></input>
+                                        </div>
+                                    </div>
+                                
                                     <div class="form-group">
                                         <label for="inputPreferredName" class="col-lg-3 control-label">Age</label>
                                         <div class="col-lg-9">
@@ -45,7 +52,7 @@
                                     <div class="form-group">
                                         <label for="inputPreferredName" class="col-lg-3 control-label">Address</label>
                                         <div class="col-lg-9">
-                                            <textarea rows="2" type="text" class="form-control" name="address" value ="<?php echo $userInfo['address']; ?>"> </textarea>
+                                            <textarea rows="2" type="text" class="form-control" name="address"><?php echo $userInfo['address'];?> </textarea>
                                         </div>
                                     </div>
                                       
@@ -72,7 +79,7 @@
                                     <div class="form-group">
                                         <label class="col-lg-3 control-label">Self Introduction</label>
                                         <div class="col-lg-9">
-                                            <textarea rows="4" type="text" class="form-control" name="intro" value ="<?php echo $userInfo['intro']; ?>"> </textarea>
+                                            <textarea rows="4" type="text" class="form-control" name="intro"><?php echo $userInfo['intro']; ?> </textarea>
                                         </div>
                                     </div>
                                       
