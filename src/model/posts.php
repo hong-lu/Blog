@@ -26,7 +26,7 @@
 
     function createNewPost($h, $abs, $cont, $uid){
         $db = opendb();
-        $stmt = $db->prepare("INSERT INTO posts(heading, abstract,content, uid) VALUES ( ?, ?, ?,?)");
+        $stmt = $db->prepare("INSERT INTO posts(heading, abstract, content, uid) VALUES ( ?, ?, ?,?)");
         $stmt->bind_param('ssss',$h, $abs, $cont,$uid);
         if ($stmt->execute() === TRUE) {
             echo "Record created successfully";

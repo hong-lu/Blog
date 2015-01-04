@@ -51,15 +51,16 @@
                         foreach ($comments as $cmt){
                             $array = getUserInfo($cmt['uid']);
                             $pfname = $array['pf_name'];
-                            echo 
+                            $str =
                             '<div class="MyCommentPanel">
                                 <span class="glyphicon glyphicon-user" aria-hidden=true> '.$pfname.'</span>
                                 <br>
                                 <div style="margin:0px 0px 0px 40px">
                                     <small>Date: '.$cmt['date'].'</small><br>
-                                    <p style="font-size:20px">'.$cmt['content'].'</p>
+                                    <p style="font-size:20px">'.htmlspecialchars($cmt['content']).'</p>
                                 </div>
                             </div>';
+                            echo $str;
                         }
                         ?>
                         
