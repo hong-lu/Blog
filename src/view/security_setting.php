@@ -27,7 +27,7 @@
                     <div class="col-lg-8 col-lg-offset-2" >
 
                         <div class="well bs-component">
-                            <form class="form-horizontal" method="post" action="manage_input/manage_user_info.php" onsubmit="return validateSecurityForm(this);">
+                            <form class="form-horizontal" method="post" onsubmit="javascript: return validateSecurityForm(this);" action="manage_input/manage_user_info.php">
                                 <fieldset>
                                     <div class="col-md-12">
                                         <input type="hidden" value="security" name="action"></input>
@@ -58,7 +58,7 @@
                                   
                                     <div class="form-group">
                                       <div class="col-lg-12">
-                                        <button type="submit" style="margin-left:45%;" class="btn btn-primary" href="all_posts.php?uid='.$_GET['id']">Submit</button>
+                                        <button type="submit" style="margin-left:45%;" class="btn btn-primary">Submit</button>
                                       </div>
                                     </div>
                                 </fieldset>

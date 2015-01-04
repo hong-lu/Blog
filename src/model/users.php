@@ -1,13 +1,17 @@
 <?php
     include_once(__DIR__."/db.php");
 
-    function checkuname($new_uname){
+    function checkUname($new_uname){
         $db = opendb();
-        $stmt = "SELECT user_name FROM Users WHERE user_name='".$new_uname."'";
+        $stmt = "SELECT * FROM users WHERE user_name = '$new_uname' ";
         if(!$result = $db->query($stmt)){
-            return false;
+             return false;
         }
         else{
+            $row = $result->fetch_assoc();
+            if(empty($row)){
+                return false;
+            }
             return true;
         }
     }
@@ -30,8 +34,8 @@
 
     function getUserId($uname){
         $db = opendb(); 
-        $stmt2 = "SELECT * FROM users WHERE user_name = '$uname' ";
-        if(!$result = $db->query($stmt2)){
+        $stmt = "SELECT * FROM users WHERE user_name = '$uname' ";
+        if(!$result = $db->query($stmt)){
             die('There was an error running the query [' . $db->error . ']');
         }   
 
@@ -99,6 +103,7 @@
         }
         $stmt->close();  
     }
+
     function uploadImg($url){
         $db = opendb();
         $stmt = $db->prepare("UPDATE users SET img = ? WHERE uid = ?");
