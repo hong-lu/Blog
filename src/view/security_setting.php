@@ -37,7 +37,7 @@
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-lg-3 control-label">New Password</label>
                                         <div class="col-lg-9">
-                                            <input type="password" name="pass1" class="form-control" id="pass1" placeholder="Your password should consists of both alphabets and numbers!" value ="<?php echo $userInfo['password']; ?>" >
+                                            <input type="password" name="pass1" class="form-control" id="pass1" placeholder="Your new password">
                                         </div>
                                     </div>
                               
@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-lg-3 control-label">Confirm Password</label>
                                         <div class="col-lg-9">
-                                            <input type="password" name="pass2" class="form-control" id="pass2" onchange="checkPassSame(); return false;" placeholder="Please enter your password again">
+                                            <input type="password" name="pass2" class="form-control" id="pass2" onchange="checkPassSame(); return false;">
                                         </div>
                                     </div>
                                 
