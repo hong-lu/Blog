@@ -19,7 +19,7 @@
                 <div class="col-lg-12">
                     <br><br>
                     <div class="page-header">
-                        <h2 id="forms" style="text-align: center">Change your password or email </h2>
+                        <h2 id="forms" style="text-align: center">Change your password</h2>
                     </div>
                 </div>
               
