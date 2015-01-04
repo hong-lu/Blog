@@ -12,7 +12,7 @@
         
         <div class="row">
          
-            <div class="col-lg-12 text-center v-center" style="background-color:#18bc9c">
+            <div class="col-md-12 text-center v-center" style="background-color:#18bc9c">
             
                 <h1 style="color:#FFFFFF; font-family:Papyrus">MilkyBlog</h1>
                 <p class="lead text1" >Home Page</p>
@@ -103,9 +103,8 @@
         ?>
 
         </div>
+        <?php require_once('view/common/footer.php') ?>
     </div>
 
-    <?php require_once('view/common/footer.php') ?>
-    
 </body>
 </html>

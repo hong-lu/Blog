@@ -109,6 +109,7 @@
                 </div>
 
             </div>
+            <?php require_once('common/footer.php') ?>
         </div>
     </body>
 </html>

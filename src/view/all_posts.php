@@ -31,9 +31,8 @@
                     ?> 
                 </div>
             </div>
+            <?php require_once('common/footer.php') ?>
         </div>
-
-        <?php require_once('common/footer.php') ?>
 
     </body>
 </html>

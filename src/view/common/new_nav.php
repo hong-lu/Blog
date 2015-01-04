@@ -18,7 +18,7 @@ if (isset($_GET['uid'])){
 
     <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="<?php echo "all_posts.php?uid=".$myid; ?>">All Posts</a></li>
+            <li><a href="<?php echo "all_posts.php?uid=".$myid; ?>">All My Posts</a></li>
             <li><a href="new_post.php">New Post</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Settings <b class="caret"></b></a>
@@ -32,11 +32,6 @@ if (isset($_GET['uid'])){
                 </ul>
             </li>
         </ul>
-
-        <form class="navbar-form navbar-left" method="post" action="manage_input/search_post.php">
-            <input class="form-control col-lg-8" placeholder="Enter the post title" type="text">
-            <button type="submit" class="btn btn-success" >Search</button>
-        </form>
 
         <ul class="nav navbar-nav navbar-right">
             <li style="margin-right: 20px"><a class="btn" style="text-decoration:none;" href="manage_input/logout.php" >Log Out</a></li>
