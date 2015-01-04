@@ -2,7 +2,9 @@
 include_once('../../model/users.php');
 
 if(checkUname($_POST['user_name'])){
-    header('Location: alert.php');
+    echo "<script> alert('The user name has been taken');
+    window.location = '../register.php'; </script>";
+
 }
 
 else{
@@ -10,7 +12,7 @@ else{
     session_start();
     $_SESSION['user_name'] = $_POST['user_name'];
     $_SESSION['uid'] = $id;
+    header('Location:../all_posts.php?uid='.$id);
 }
 
-header('Location:../all_posts.php?uid='.$id);
 ?> 
