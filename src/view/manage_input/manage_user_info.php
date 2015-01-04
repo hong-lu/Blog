@@ -7,7 +7,9 @@ if ($_POST['action'] == "login"){
         header("Location: ../all_posts.php?uid=".$uid);
     }
     else{
-        echo "Wrong Input!";
+        echo  "<script> alert('Wrong Username or Password!');
+    window.location = '../../index.php'; </script>";
+        
     }
 }
 else if ($_POST['action'] == "preference"){
@@ -61,7 +63,9 @@ else if ($_POST['action'] == "profile"){
             uploadImg( $_FILES["fileToUpload"]["name"]);
             header("Location: ../all_posts.php?uid=".$_SESSION['uid']);
         } else {
-            echo "Sorry, there was an error uploading your file.";
+            echo
+            "<script> alert('Sorry, there was an error uploading your file.');
+            window.location = '../profile.php'; </script>";
         }
     }
 }
