@@ -38,7 +38,7 @@
                     <div class="container-fluid" style="margin-bottom: 30px;">
                         <div class="col-md-12" style="text-align:center;">
                             <a class="btn btn-success" style="text-decoration:none;" href="new_post.php?post='. $_GET['post'].' ">Edit</a>
-                            <a class="btn btn-danger" style="text-decoration:none;" href="manage_input/manage_post.php?post='. $_GET['post'].' ">Delete</a>                   
+                            <a class="btn btn-danger" style="text-decoration:none;" href="manage_input/manage_post.php?post='. $_GET['post'].' " onsubmit="return confirmDelete();">Delete</a>                   
                         </div>
                     </div>';
                 }
@@ -63,7 +63,7 @@
                             echo $str;
                             if ($cmt['uid'] == $_SESSION['uid']){
                                 echo '
-                                <form role="form" method="POST" action="manage_input/manage_comment.php">
+                                <form role="form" method="POST" action="manage_input/manage_comment.php" onsubmit="return confirmDelete();">
                                     <div class="wrapper" style="text-align: center">
                                         <input type="hidden" value="'.$cmt['cid'].'" name = "cid">
                                         <input type=hidden name="pid" value="'.$pid.'" >

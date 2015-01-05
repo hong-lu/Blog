@@ -94,6 +94,11 @@
         
         } 
             return error;
-        }
+    }
+    
+    function confirmDelete(){
+        var id = confirm("Are you sure to delete the post?");
+        return id;
+    }
     
 </script>
