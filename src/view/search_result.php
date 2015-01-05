@@ -28,6 +28,9 @@
                             </div>';
                         }
                     }
+                    else{
+                        echo "No result found!";
+                    }
                     ?> 
                 </div>
             </div>

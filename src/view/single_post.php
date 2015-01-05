@@ -61,6 +61,9 @@
                                 </div>
                             </div>';
                             echo $str;
+                            if ($cmt['uid'] == $_SESSION['uid']){
+                                echo '<button class="btn btn-success">Delete</button>';
+                            }
                         }
                         ?>
                         
@@ -76,6 +79,7 @@
                         </form>
                     </div>
                 
+                    
                 </div>
             </div>
             
