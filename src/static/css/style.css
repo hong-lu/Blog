@@ -25,7 +25,7 @@
     border-bottom: 2px solid #2c3e50;
     margin-bottom:20px;
 }
-.circle{
+/*.circle{
     height: 300px;
     width:300px;
     border-color:#ff0000;
@@ -73,6 +73,12 @@
 .text-navy{
     color: #0505a2;
 }
+*/
+.jumbotron.search-display{
+    margin-top: 40px; 
+    padding: 40px;
+    margin-bottom: 0px;
+}
 .text1{
     color:white;
     text-decoration: none;
@@ -84,7 +90,7 @@
     opacity: 0.8;
     border-radius: 10px;
     border: 0px solid transparent;
-    
+    margin-right: 0;
 }
 
 .panel-default.post-panel{

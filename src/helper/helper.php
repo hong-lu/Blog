@@ -2,17 +2,16 @@
 <script>    
     function validateSecurityForm(form){
 
-        var pass = form.pass1.value;
+        var pass1 = form.pass1.value;
+        var pass2 = form.pass2.value;
         var warning = "#e43725";
 
-        if (checkPassword(pass) != ""){
+        if (checkPassword(pass1, pass2) != ""){
             form.pass1.focus();
             error = checkPassword(pass);
             alert(error);
             return false;
-        
         } else {
-            console.log(true);
             return true;
         }
     }
@@ -80,20 +79,22 @@
         }
     }
     
-    function checkPassword(pass){
+    function checkPassword(pass1, pass2){
         var valid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
         var error = "";
         if (pass === "") {
             error = "You didn't enter a password.\n";
 
-        } else if ((pass.length < 6) || (pass.length > 16)) {
+        } else if ((pass1.length < 6) || (pass1.length > 16)) {
             error = "The password should be more than 6 characters and less than 16 characters. \n";
 
-        } else if (!(valid.test(pass))){
+        } else if (!(valid.test(pass1))){
             error = "The password must contain one lowercase letter, one uppercase letter and one numeric digit.\n";
         
-        } 
-            return error;
+        } else if ( pass1 !== pass2){
+            error = "Passwords mismatch!\n";
+        }
+        return error;
     }
     
     function confirmDelete(){

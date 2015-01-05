@@ -46,6 +46,7 @@
 
     function loginCheck($uname, $password){
         $db = opendb();
+        $password = md5($password);
         $sql = "SELECT * FROM users WHERE user_name = '$uname' and password= '$password'";
         $result= $db->query($sql);
         if(!$result = $db->query($sql)){
@@ -106,6 +107,7 @@
 
     function uploadImg($url){
         $db = opendb();
+        $url = htmlspecialchars($url);
         $stmt = $db->prepare("UPDATE users SET img = ? WHERE uid = ?");
         $stmt ->bind_param('si', $url, $_SESSION['uid']);
         if ($stmt->execute() === TRUE) {

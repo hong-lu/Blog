@@ -12,7 +12,6 @@
                      "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
                      "save table contextmenu directionality emoticons template paste textcolor"
                 ],
-                content_css: "css/content.css",
                 toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons", 
                 style_formats: [
                     {title: 'Bold text', inline: 'b'},
@@ -39,8 +38,7 @@
             $curr_post = getSinglePost($pid);
         } 
         require_once("common/new_nav.php"); 
-        ?>
-        
+        ?> 
         <div class="container-fluid">
             <?php require_once("common/page_header.php");?>
         </div>

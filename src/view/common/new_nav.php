@@ -1,5 +1,8 @@
 <?php  
-session_start();
+error_reporting(0);
+if(!isset($_SESSION)){
+    session_start();
+}
 if (isset($_SESSION['uid'])){
     $uid = $_SESSION['uid'];
 }else{
