@@ -8,7 +8,7 @@
 
         if (checkPassword(pass1, pass2) != ""){
             form.pass1.focus();
-            error = checkPassword(pass);
+            error = checkPassword(pass1, pass2);
             alert(error);
             return false;
         } else {
@@ -43,6 +43,7 @@
     
     function validateRegistrationForm(form){
         var pass1 = form.pass1.value;
+        var pass2 = form.pass2.value;
         var uname = form.user_name.value;
         var pf_name = form.pf_name.value;
         var email = form.email.value;
@@ -51,9 +52,9 @@
         var warning = "#e43725";
         var error = "";
 
-        if (checkPassword(pass1) !== ""){
+        if (checkPassword(pass1, pass2) !== ""){
             form.pass1.focus();
-            error = checkPassword(pass1);
+            error = checkPassword(pass1, pass2);
         
         } else if (!uname.match(uname_valid)){
             error = "The username must contain alphabets and numeric digits only.\n";
@@ -82,7 +83,7 @@
     function checkPassword(pass1, pass2){
         var valid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
         var error = "";
-        if (pass === "") {
+        if (pass1 === "") {
             error = "You didn't enter a password.\n";
 
         } else if ((pass1.length < 6) || (pass1.length > 16)) {
