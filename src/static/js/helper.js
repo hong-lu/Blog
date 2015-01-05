@@ -1,5 +1,4 @@
-<?php include_once("../model/users.php"); ?>
-<script>    
+ 
     function validateSecurityForm(form){
 
         var pass1 = form.pass1.value;
@@ -103,4 +102,3 @@
         return id;
     }
     
-</script>

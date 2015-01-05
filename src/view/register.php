@@ -1,14 +1,14 @@
 <html>
     <head>
         <title>Register</title>
-        <?php require_once('common/header.php') ?>
+        <?php require_once('common/header.php')?>
+        
     </head>
     
     <body>
         <?php 
         require_once("common/new_nav.php");
         require_once("common/include.php");
-        include_once("../helper/helper.php");
         ?>
 
         <div class="container-fluid">
@@ -111,5 +111,6 @@
             </div>
             <?php require_once('common/footer.php') ?>
         </div>
+        
     </body>
 </html>

@@ -8,7 +8,6 @@
         <?php 
         require_once("common/new_nav.php");
         require_once("common/include.php");
-        include("../helper/helper.php");
         session_start();
         $userInfo = getUserInfo($_SESSION['uid']);
         ?>
