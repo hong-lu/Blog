@@ -123,4 +123,15 @@
         return $posts;
     }
 
+    function deleteComment($cid){
+        $db = opendb();
+
+        $sql = "DELETE FROM comments WHERE cid='$cid'";
+
+        if ($db->query($sql) == TRUE) {
+            echo "Record deleted successfully";
+        } else {
+            echo "Error deleting record: " . $db->error;
+        }
+    }
 ?>

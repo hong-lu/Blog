@@ -62,7 +62,14 @@
                             </div>';
                             echo $str;
                             if ($cmt['uid'] == $_SESSION['uid']){
-                                echo '<button class="btn btn-success">Delete</button>';
+                                echo '
+                                <form role="form" method="POST" action="manage_input/manage_comment.php">
+                                    <div class="wrapper" style="text-align: center">
+                                        <input type="hidden" value="'.$cmt['cid'].'" name = "cid">
+                                        <input type=hidden name="pid" value="'.$pid.'" >
+                                        <button class="btn-sm btn-danger" type="submit">Delete</button>
+                                    </div>
+                                </form>';
                             }
                         }
                         ?>
