@@ -8,6 +8,9 @@ if (isset($_SESSION['uid'])){
 if (isset($_GET['uid'])){
     $uid = $_GET['uid'];
 }
+else{
+    $uid = $_SESSION['uid'];
+}
   
 ?>
 <nav id="autohide_navbar" class="navbar navbar-default navbar-fixed-top">

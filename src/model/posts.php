@@ -108,6 +108,9 @@
 
     function searchPost($trg){
         $db = opendb();
+        if(empty($trg)){
+            return ;
+        }
         $trg = strtoupper($trg);
         $stmt = "SELECT * from posts";
         $result = $db->query($stmt);

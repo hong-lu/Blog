@@ -19,7 +19,7 @@
                     <p>' . $post['abstract'] . '</p>
                     </div>';
             }
-
+            echo '<div>';
         }
         else{
             echo '<div class="container-fluid">';
