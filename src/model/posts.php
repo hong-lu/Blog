@@ -105,4 +105,19 @@
         }
         return $posts;
     }
+
+    function searchPost($trg){
+        $db = opendb();
+        $trg = strtoupper($trg);
+        $stmt = "SELECT * from posts";
+        $result = $db->query($stmt);
+        $posts = array();
+        while ($row = $result->fetch_assoc()) {
+            if ( strpos(strtoupper($row['heading']),$trg) || strpos(strtoupper($row['abstract']),$trg) || strpos(strtoupper($row['content']),$trg) ){
+                array_push($posts, $row);
+            }
+        }
+        return $posts;
+    }
+
 ?>

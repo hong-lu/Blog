@@ -32,10 +32,9 @@ if (isset($_GET['uid'])){
                 </ul>
             </li>
         </ul>
-        
         <form class="navbar-form navbar-left" method="post" action="search_result.php">
-            <input name="keyword" class="form-control" placeholder="Enter the post title" type="text">
-            <button type="submit" class="btn btn-success" >Search</button>
+            <input name="keyword" class="form-control" type="text">
+            <button type="submit" class="btn btn-success" >Search Post</button>
         </form>
 
         <ul class="nav navbar-nav navbar-right">

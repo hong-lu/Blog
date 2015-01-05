@@ -18,7 +18,7 @@
             <div class="row">
                 <?php require_once("common/left_panel.php"); ?>
                 <div class="col-lg-9">
-                    <?php $posts = SearchPost($_POST['keyword']); 
+                    <?php $posts = searchPost($_POST['keyword']); 
                     if ($posts){
                         foreach ($posts as $post) {
                         echo '<div class="MyPostPanel">

@@ -43,7 +43,7 @@
                                     </div>
                                 
                                     <div class="form-group">
-                                        <label for="inputPreferredName" class="col-lg-3 control-label" type="number" min="1" >Age</label>
+                                        <label for="inputPreferredName" class="col-lg-3 control-label" type="number">Age</label>
                                         <div class="col-lg-9">
                                           <input type="text" class="form-control" name="age" value ="<?php echo $userInfo['age']; ?>">
                                         </div>
