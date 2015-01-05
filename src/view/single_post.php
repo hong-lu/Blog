@@ -4,13 +4,11 @@
         <?php require_once('common/header.php') ?>
     </head>
     <body>
+        <div class="container-fluid">
         <?php   
         require_once("common/include.php");
         require_once("common/new_nav.php");
         ?>
-
-        <div class="container-fluid">
-
             <?php 
                 if (!(isset($_GET['post']))){
                     header( "Location: all_posts.php" );
@@ -55,16 +53,16 @@
                             '<div class="MyCommentPanel">
                                 <span class="glyphicon glyphicon-user" aria-hidden=true> '.$pfname.'</span>
                                 <br>
-                                <div style="margin:0px 0px 0px 40px">
+                                <div class="comment-date">
                                     <small>Date: '.$cmt['date'].'</small><br>
-                                    <p style="font-size:20px">'.htmlspecialchars($cmt['content']).'</p>
+                                    <p>'.htmlspecialchars($cmt['content']).'</p>
                                 </div>
                             </div>';
                             echo $str;
                             if ($cmt['uid'] == $_SESSION['uid']){
                                 echo '
                                 <form role="form" method="POST" action="manage_input/manage_comment.php" onsubmit="return confirmDelete();">
-                                    <div class="wrapper" style="text-align: center">
+                                    <div class="wrapper text-center">
                                         <input type="hidden" value="'.$cmt['cid'].'" name = "cid">
                                         <input type=hidden name="pid" value="'.$pid.'" >
                                         <button class="btn-sm btn-danger" type="submit">Delete</button>
@@ -80,7 +78,7 @@
                             <br>
                             <input type=hidden name="uid" <?php echo "value=".$_SESSION['uid'];?> >
                             <input type=hidden name="pid" <?php echo "value=".$pid;?> >
-                            <div class="wrapper" style="text-align:center">
+                            <div class="wrapper text-center">
                                 <button type="submit" class="btn btn-primary" >Submit</button>
                             </div>
                         </form>

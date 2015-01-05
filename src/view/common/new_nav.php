@@ -23,7 +23,7 @@ else{
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" style="font-family:Papyrus" href="../index.php">MilkyBlog</a>
+        <a class="navbar-brand BlogName" href="../index.php">MilkyBlog</a>
     </div>
 
     <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -48,7 +48,7 @@ else{
         </form>
 
         <ul class="nav navbar-nav navbar-right">
-            <li style="margin-right: 20px"><a class="btn" style="text-decoration:none;" href="manage_input/logout.php" >Log Out</a></li>
+            <li class="logout-btn"><a class="btn a-none" href="manage_input/logout.php" >Log Out</a></li>
         </ul>
       
     </div>

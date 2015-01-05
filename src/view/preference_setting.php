@@ -18,7 +18,7 @@
                 <div class="col-lg-12">
                     <br><br>
                     <div class="page-header">
-                        <h2 id="forms" style="text-align: center">Edit your profile and personal information </h2> 
+                        <h2 id="forms" class="text-center">Edit your personal information </h2> 
                     </div>
                 </div>
                 
@@ -91,8 +91,8 @@
                                       
                                     <input type="hidden" value="preference" name="action"></input>
                                     <div class="form-group">
-                                        <div class="col-lg-12">
-                                            <button type="submit" style="margin-left:45%;" class="btn btn-primary" href="all_posts.php?uid='.$_GET['id']">Submit</button>
+                                        <div class="col-lg-12 text-center">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </fieldset>

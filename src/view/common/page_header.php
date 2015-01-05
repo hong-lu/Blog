@@ -13,7 +13,7 @@
                     echo "../static/uploads/".$user['img'];
                 }
                 ?>"  
-                style="max-width: 200px; max-height=200px;" class="img-circle"> </a>
+                class="img-circle profile-img"> </a>
                 </div>
                 <div class="col-lg-9">
                     <h1><?php echo $user['pf_name']." 's Blog"; ?> </h1>

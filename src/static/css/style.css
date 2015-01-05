@@ -11,80 +11,85 @@
     font-size: 22px;
     text-decoration: underline;
 }
+
 .MyPostPanel{
     border-bottom: 2px solid #2c3e50;
     margin: 40px;
     margin-top:0px;
 }
+
 .MyCommentPanel{
     border-bottom: 1px solid #2c3e50;
     margin-bottom:20px;
     font-size:20px;
 }
+
+.comment-date{
+    margin:0px 0px 0px 40px;
+}
+
 .MyCommentHeading{
     border-bottom: 2px solid #2c3e50;
     margin-bottom:20px;
 }
+
 .panel-body.my-panel-body{
     border-color: #337ab7; 
     height: 180px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/*.circle{
-    height: 300px;
-    width:300px;
-    border-color:#ff0000;
-    border-radius: 100%;
-    background-color:white;
-    border-bottom-width: 10px;
-    opacity: 0.8;
-    display: inline-block;
-    margin:10px;
-    float:left;
-    padding:10px;
-}
-.circleText{
-    padding:10px 30px 30px 30px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.4;
-}
-.circleH{
-    text-align: center;
-    padding:30px 30px 10px 30px;
-    font-weight:bold;
+
+.left-panel-body{
+    padding:0px; 
+    border: 1px solid #2c3e50;
 }
 
-.circleHdiv{
-    height: 100px;
-}
-.label-lg{
-      height: 46px;
-      padding: 10px 16px;
-      font-size: 18px;
-      line-height: 1.33;
-      border-radius: 6px;
-}
-.navbar {
-    margin-bottom: 0;
-}
-.container-fluid.backgroundimg{
-    background-image:url('../img/background3.jpg'); 
-    background-size: 100% 100%; 
-    min-height:1000px;
+.li-grp{
+    margin:0;
 }
 
-.text-navy{
-    color: #0505a2;
+.BlogName{
+    color:#FFFFFF; 
+    font-family:Papyrus;
 }
-*/
+
+.color-success{
+    background-color:#18bc9c;
+}
+
+.MyWell{
+    margin: 10px;
+}
+
+.a-none{
+    text-decoration:none;
+}
+
+.logout-btn{
+    margin-right: 20px;
+}
+
+.abstract-input{
+    margin: 20px 0 30px 0;
+}
+
+.glyphicon-margin{
+    margin-right: 10px;
+}
+
+.profile-img{
+    max-width: 200px;
+    max-height=200px;
+}
+
+
 .search-display.jumbotron{
     margin: 60px 0 0 0; 
     padding: 40px;
     margin-bottom: 0px;
 }
+
 .text1{
     color:white;
     text-decoration: none;
@@ -107,22 +112,6 @@
     opacity:0.8;
 }
 
-.panel-heading.navyblue{
-    border-color: #337ab7;
-    background-color:#10108b;  
-    opacity:0.9;
-
-}
-.panel-heading.red{
-    border-color: #fd8c9e;
-    background-color:#ef0303; 
-    opacity:0.9;
-}
-.panel-heading.green{
-    border-color: green;
-    background-color:green; 
-    opacity:0.9;
-}  
 .my-panel-heading{
     height: 110px;
 }

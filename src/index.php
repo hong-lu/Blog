@@ -12,9 +12,9 @@
         
         <div class="row">
          
-            <div class="col-md-12 text-center v-center" style="background-color:#18bc9c">
+            <div class="col-md-12 text-center v-center color-success">
             
-                <h1 style="color:#FFFFFF; font-family:Papyrus">MilkyBlog</h1>
+                <h1 class="BlogName">MilkyBlog</h1>
                 <p class="lead text1" >Home Page</p>
             
                 <br/>
@@ -49,7 +49,7 @@
             </div>
             
             <br clear="all"> <br clear="all">
-            <h3 class="register"><a href="view/register.php" style="color:black;">Don't have an account?<br>Register here!</h3>
+            <h3 class="text-center"><a href="view/register.php" class="register">Don't have an account?<br>Register here!</h3>
         </div> <!-- /row -->
     
     </div> <!-- /container full -->

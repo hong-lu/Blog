@@ -19,7 +19,7 @@
                 <div class="col-lg-12">
                     <br><br>
                     <div class="page-header">
-                        <h2 id="forms" style="text-align: center">Change your password</h2>
+                        <h2 id="forms" class="text-center">Change your password</h2>
                     </div>
                 </div>
               
@@ -51,8 +51,8 @@
                                 
                                   
                                     <div class="form-group">
-                                      <div class="col-lg-12">
-                                        <button type="submit" style="margin-left:45%;" class="btn btn-primary">Submit</button>
+                                      <div class="col-lg-12 text-center">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
                                       </div>
                                     </div>
                                 </fieldset>

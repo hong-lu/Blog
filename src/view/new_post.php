@@ -57,8 +57,8 @@
                             </div>
                             <br><br><br><br>
                             
-                            <div class="row" style="margin: 20px 0 20px 0;">
-                                <div class="form-group-lg"style="margin: 30px 0 20px 0;">
+                            <div class="row abstract-input" >
+                                <div class="form-group-lg">
                                     <label class="col-md-2 control-label label-lg">ABSTRACT</label>
                                 </div>
                                 <div class="col-md-10">
@@ -71,7 +71,7 @@
                             <div class="form-group-lg">
                                 <label class="col-md-2 control-label label-lg">CONTENT</label>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 abstract-input">
                                 <textarea class="form-control" id="elm1" rows="20" name="content"><?php if ($edit == true){echo $curr_post['content'];}?></textarea>
                             </div>
                             
