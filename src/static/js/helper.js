@@ -82,7 +82,7 @@
     function checkPassword(pass1, pass2){
         var valid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
         var error = "";
-        if (pass === "") {
+        if (pass1 === "") {
             error = "You didn't enter a password.\n";
 
         } else if ((pass1.length < 6) || (pass1.length > 16)) {

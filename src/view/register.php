@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2" >
                         <div class="well bs-component">
-                            <form id="myForm" class="form-horizontal" method="post" action="manage_input/create_user.php" onsubmit="return validateRegistrationForm(this);">
+                            <form class="form-horizontal" method="post" action="manage_input/create_user.php" onsubmit="return validateRegistrationForm(this);">
                                 <fieldset>
                                     <legend style="text-align: center">Please take note that all fields are mandatory</legend>
 
@@ -112,10 +112,5 @@
             <?php require_once('common/footer.php') ?>
         </div>
         
-        <script>
-            document.getElementById("myForm").onsubmit = function() {
-                validateRegistrationForm(document.getElementById("myForm"));
-            };
-        </script>
     </body>
 </html>

@@ -12,7 +12,7 @@ else{
     session_start();
     $_SESSION['user_name'] = $_POST['user_name'];
     $_SESSION['uid'] = $id;
-    header('Location:../all_posts.php?uid='.$id);
+    //header('Location:../all_posts.php?uid='.$id);
 }
 
 ?> 
