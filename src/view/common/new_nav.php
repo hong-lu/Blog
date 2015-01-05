@@ -32,6 +32,11 @@ if (isset($_GET['uid'])){
                 </ul>
             </li>
         </ul>
+        
+        <form class="navbar-form navbar-left" method="post" action="search_result.php">
+            <input name="keyword" class="form-control" placeholder="Enter the post title" type="text">
+            <button type="submit" class="btn btn-success" >Search</button>
+        </form>
 
         <ul class="nav navbar-nav navbar-right">
             <li style="margin-right: 20px"><a class="btn" style="text-decoration:none;" href="manage_input/logout.php" >Log Out</a></li>

@@ -19,7 +19,7 @@
     function addUser($user_name, $email, $gender, $password, $pf_name){
         $db = opendb();    
         $stmt = $db->prepare("INSERT INTO users(user_name, email, gender, password, pf_name) VALUES ( ?, ?, ?, ?, ?)");
-        $stmt->bind_param('sssss',$user_name, $email, $gender, $password, $pf_name);
+        $stmt->bind_param('sssss',$user_name, $email, $gender, md5($password), $pf_name);
         if ($stmt->execute() === TRUE) {
             echo "Record created successfully";
         } 
