@@ -1,9 +1,9 @@
 <?php
 
 $config = array();
-$config['hostname'] = "localhost";
-$config['dbuser'] = "root";
+$config['hostname'] = "";
+$config['dbuser'] = "r";
 $config['dbpassword'] = "";
-$config['dbname'] = "mblog";
+$config['dbname'] = "";
 
 ?>
