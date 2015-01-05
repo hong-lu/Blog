@@ -3,3 +3,4 @@
 <link rel="stylesheet" href="../static/css/style.css" type="text/css">
 <script src="../static/js/jquery.min.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/helper.js"></script>
