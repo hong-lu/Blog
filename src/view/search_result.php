@@ -6,12 +6,13 @@
     </head>
     
     <body>
+        <div class="container">
         <?php 
         require_once("common/new_nav.php");
         require_once("common/include.php");
         $posts = searchPost($_POST['keyword']); 
         if (empty($posts)){
-            echo '<script> alert("No result match!"); window.location = "all_posts.php?uid='.$uid.'"; </script>';
+            echo '<script> alert("No post match!"); window.location = "all_posts.php?uid='.$uid.'"; </script>';
         }
         else{
             echo '<div class="jumbotron search-display" >';
@@ -26,6 +27,7 @@
         }
         require_once("common/footer.php");
         ?>
+        </div>
 
     </body>
 </html>

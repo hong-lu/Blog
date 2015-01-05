@@ -67,8 +67,8 @@
                 echo '     	
                 <div class="col-md-4">
                     <div class="panel panel-info" >
-                    <div class="panel-heading" ><h3><a class="text1" href="single_post.php?post='.$post['post_id'].'">'.$post['heading'].'</a></h3></div>
-                    <div class="panel-body " style="border-color: #337ab7; height: 180px;">'.$post['abstract'].'
+                    <div class="panel-heading my-panel-heading" ><h3><a class="text1" href="view/single_post.php?post='.$post['post_id'].'">'.$post['heading'].'</a></h3></div>
+                    <div class="panel-body my-panel-body">'.$post['abstract'].'
                     </div>
                     </div>
                 </div>';
@@ -78,8 +78,8 @@
                 echo '     	
                 <div class="col-md-4">
                     <div class="panel panel-warning" >
-                    <div class="panel-heading" ><h3><a class="text1" href="single_post.php?post='.$post['post_id'].'">'.$post['heading'].'</a></h3></div>
-                    <div class="panel-body " style="border-color: #337ab7; height: 180px;">'.$post['abstract'].'
+                    <div class="panel-heading my-panel-heading" ><h3><a class="text1" href="view/single_post.php?post='.$post['post_id'].'">'.$post['heading'].'</a></h3></div>
+                    <div class="panel-body my-panel-body">'.$post['abstract'].'
                     </div>
                     </div>
                 </div>';
@@ -89,8 +89,8 @@
                 echo '     	
                 <div class="col-md-4">
                     <div class="panel panel-danger" >
-                    <div class="panel-heading" ><h3><a class="text1" href="single_post.php?post='.$post['post_id'].'">'.$post['heading'].'</a></h3></div>
-                    <div class="panel-body " style="border-color: #337ab7; height: 180px;">'.$post['abstract'].'
+                    <div class="panel-heading my-panel-heading" ><h3><a class="text1" href="view/single_post.php?post='.$post['post_id'].'">'.$post['heading'].'</a></h3></div>
+                    <div class="panel-body my-panel-body">'.$post['abstract'].'
                     </div>
                     </div>
                 </div>';
