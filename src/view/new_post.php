@@ -76,7 +76,7 @@
                             </div>
                             
                             <div class="col-md-12">
-                                <input type=hidden name="id" <?php if($edit){echo 'value='.$pid;} ?> >
+                                <input type=hidden name="pid" <?php if($edit){echo 'value='.$pid;} ?> >
                             </div>
                             
                             <div class="col-md-6 col-md-offset-6">

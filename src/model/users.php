@@ -36,8 +36,8 @@
 
     function getUserId($uname){
         $db = opendb(); 
-        $stmt = "SELECT * FROM users WHERE user_name = ? ";
-        $stmt ->bind_param('s', $uname);
+        $stmt = $db->prepare("SELECT * FROM users WHERE user_name = ? ");
+        $stmt->bind_param('s', $uname);
         if(!$result = $stmt->get_result()){
             die('There was an error running the query [' . $db->error . ']');
         }   
@@ -50,11 +50,12 @@
     function loginCheck($uname, $password){
         $db = opendb();
         $password = md5($password);
-        $stmt = "SELECT * FROM users WHERE user_name = ? and password= ?";
+        $stmt = $db->prepare( "SELECT * FROM users WHERE user_name = ? AND password= ?");
         $stmt ->bind_param('ss', $uname, $password);
-        if(!$result = $stmt->get_result()){
+        if(!$stmt->execute()){
             die('There was an error running the query [' . $db->error . ']');
         }
+        $result = $stmt->get_result();
         $row = $result->fetch_assoc();
         $_SESSION['uid'] = $row['uid'];
         return $row['uid'];

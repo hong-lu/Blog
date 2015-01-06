@@ -134,4 +134,15 @@
             echo "Error deleting record: " . $db->error;
         }
     }
+
+    function getSingleCmt ($cid) {
+        $db = opendb();
+        $sql = 'SELECT * FROM comments WHERE cid ='.$cid;
+
+        if(!$result = $db->query($sql)){
+            die('There was an error running the query [' . $db->error . ']');
+        }
+
+        return  $result->fetch_assoc();
+    }
 ?>

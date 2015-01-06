@@ -4,7 +4,6 @@ include_once('../../model/users.php');
 if(checkUname($_POST['user_name'])){
     echo "<script> alert('The user name has been taken');
     window.location = '../register.php'; </script>";
-
 }
 
 else{

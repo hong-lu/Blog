@@ -18,7 +18,7 @@
                   <div class="col-lg-12">
                     <br><br>
                     <div class="page-header">
-                      <h2 id="forms" style="text-align: center">Create Your New account Today!</h2>
+                      <h2 id="forms" style="text-align: center">Create Your New Account Today!</h2>
                     </div>
                   </div>
                 </div>
