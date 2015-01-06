@@ -3,11 +3,13 @@
 
     function checkUname($new_uname){
         $db = opendb();
-        $stmt = "SELECT * FROM users WHERE user_name = '$new_uname' ";
-        if(!$result = $db->query($stmt)){
-             return false;
+        $stmt = $db->prepare("SELECT * FROM users WHERE user_name = ?");
+        $stmt ->bind_param('s', $new_uname);
+        if($stmt->execute() === TRUE){
+             return true;
         }
         else{
+            $result = $stmt->get_result();
             $row = $result->fetch_assoc();
             if(empty($row)){
                 return false;
@@ -34,8 +36,9 @@
 
     function getUserId($uname){
         $db = opendb(); 
-        $stmt = "SELECT * FROM users WHERE user_name = '$uname' ";
-        if(!$result = $db->query($stmt)){
+        $stmt = "SELECT * FROM users WHERE user_name = ? ";
+        $stmt ->bind_param('s', $uname);
+        if(!$result = $stmt->get_result()){
             die('There was an error running the query [' . $db->error . ']');
         }   
 
@@ -47,9 +50,9 @@
     function loginCheck($uname, $password){
         $db = opendb();
         $password = md5($password);
-        $sql = "SELECT * FROM users WHERE user_name = '$uname' and password= '$password'";
-        $result= $db->query($sql);
-        if(!$result = $db->query($sql)){
+        $stmt = "SELECT * FROM users WHERE user_name = ? and password= ?";
+        $stmt ->bind_param('ss', $uname, $password);
+        if(!$result = $stmt->get_result()){
             die('There was an error running the query [' . $db->error . ']');
         }
         $row = $result->fetch_assoc();
